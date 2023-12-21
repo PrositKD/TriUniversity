@@ -1,0 +1,14 @@
+C:\Users\asus\source\repos\TriUniversity\DAL\bin\Debug\DAL.dll.config
+C:\Users\asus\source\repos\TriUniversity\DAL\bin\Debug\DAL.dll
+C:\Users\asus\source\repos\TriUniversity\DAL\bin\Debug\DAL.pdb
+C:\Users\asus\source\repos\TriUniversity\DAL\bin\Debug\EntityFramework.dll
+C:\Users\asus\source\repos\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\asus\source\repos\TriUniversity\DAL\bin\Debug\EntityFramework.xml
+C:\Users\asus\source\repos\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\asus\source\repos\TriUniversity\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\asus\source\repos\TriUniversity\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\TriUniversity\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\asus\source\repos\TriUniversity\DAL\obj\Debug\DAL.dll
+C:\Users\asus\source\repos\TriUniversity\DAL\obj\Debug\DAL.pdb
+C:\Users\asus\source\repos\TriUniversity\DAL\obj\Debug\DAL.Migrations.InitDB.resources
+C:\Users\asus\source\repos\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
