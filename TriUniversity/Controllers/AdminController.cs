@@ -27,5 +27,21 @@ namespace TriUniversity.Controllers
             }
 
         }
+        [HttpPost]
+        [Route("api/admin/login")]
+        public HttpResponseMessage GetAdmin([FromBody] AdminDTO adminDto)
+        {
+            try
+            {
+                // Access properties from the DTO (newsDto) and perform actions accordingly
+                var data = AdminService.GetAdmin(adminDto);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+
+        }
     }
 }

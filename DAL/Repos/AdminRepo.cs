@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class AdminRepo : Repo, IRepo<Admin, int, bool>
+    internal class AdminRepo : Repo, IRepo<Admin, int, Admin>
     {
-        public bool Add(Admin obj)
+        public Admin Add(Admin obj)
         {
             db.Admins.Add(obj);
-            return db.SaveChanges() > 0;
+            db.SaveChanges();
+            return obj;
         }
 
         public bool Delete(int id)
@@ -21,15 +22,13 @@ namespace DAL.Repos
             throw new NotImplementedException();
         }
 
-
-        public bool Get(Admin obj)
+        public Admin Get(Admin obj)
         {
-            
-             var data = db.Admins.FirstOrDefault(admin => admin.Id == obj.Id && admin.Email == obj.Email);
+            var data = db.Admins.FirstOrDefault(admin => admin.Password == obj.Password && admin.Email == obj.Email);
 
-             return data != null;
+            return data;
         }
 
-        
+      
     }
 }

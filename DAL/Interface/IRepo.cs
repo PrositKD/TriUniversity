@@ -11,7 +11,7 @@ namespace DAL.Interface
 
 
       
-        bool Get(CLASS obj);
+        RET Get(CLASS obj);
         bool Delete(ID id);
         RET Add(CLASS obj);
         

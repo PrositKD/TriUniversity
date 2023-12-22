@@ -12,14 +12,13 @@ namespace BLL.Services
 {
     public class AdminService
     {
-        public static bool CreateAdmin(AdminDTO adminDTO)
+        public static AdminDTO CreateAdmin(AdminDTO adminDTO)
         {
-           
             // Configure AutoMapper
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<AdminDTO, Admin>(); // Map from DTO to entity
-                                                  // Add additional mappings if needed
+                cfg.CreateMap<Admin, AdminDTO>(); // Map from entity to DTO
             });
 
             // Create mapper instance
@@ -29,7 +28,51 @@ namespace BLL.Services
             var adminEntity = mapper.Map<Admin>(adminDTO);
 
             // Pass the mapped entity to the repository's Add method
-            return DataAccessFactory.AdminData().Add(adminEntity);
+            var addedAdminEntity = DataAccessFactory.AdminData().Add(adminEntity);
+
+            // Map the added entity back to DTO
+            var addedAdminDTO = mapper.Map<AdminDTO>(addedAdminEntity);
+
+            // Return the DTO
+            return addedAdminDTO;
         }
+
+
+        public static object  GetAdmin(AdminDTO adminDTO)
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<AdminDTO, Admin>();
+                cfg.CreateMap<Admin, AdminDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var adminEntity = mapper.Map<Admin>(adminDTO);
+            var result = DataAccessFactory.AdminData().Get(adminEntity);
+            var addedAdminDTO = mapper.Map<AdminDTO>(result);
+
+            if (addedAdminDTO != null)
+            {
+                var message = new
+                {
+                    Status = "User found",
+                    Email = addedAdminDTO.Email
+                };
+                return (message);
+            }
+            else
+            {
+                var message = new
+                {
+                    Status = "User not found"
+                };
+                return (message);
+            }
+        }
+
+
+
+
     }
 }
