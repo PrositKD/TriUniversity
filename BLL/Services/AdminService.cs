@@ -65,7 +65,7 @@ namespace BLL.Services
             {
                 var message = new
                 {
-                    Status = "User not found"
+                    Status = "password or email incorrect"
                 };
                 return (message);
             }
