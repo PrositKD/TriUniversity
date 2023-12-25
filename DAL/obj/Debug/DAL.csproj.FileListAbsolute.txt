@@ -41,3 +41,17 @@ C:\Users\Mehedi Hasan Rabbi\Desktop\TRI-UNI\TriUniversity\DAL\obj\Debug\DAL.cspr
 C:\Users\Mehedi Hasan Rabbi\Desktop\TRI-UNI\TriUniversity\DAL\obj\Debug\DAL.dll
 C:\Users\Mehedi Hasan Rabbi\Desktop\TRI-UNI\TriUniversity\DAL\obj\Debug\DAL.pdb
 C:\Users\Mehedi Hasan Rabbi\Desktop\TRI-UNI\TriUniversity\DAL\obj\Debug\DAL.Migrations.student.resources
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\bin\Debug\DAL.dll.config
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\bin\Debug\DAL.dll
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\bin\Debug\DAL.pdb
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\obj\Debug\DAL.dll
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\obj\Debug\DAL.pdb
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\obj\Debug\DAL.Migrations.studdentt.resources
+C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
