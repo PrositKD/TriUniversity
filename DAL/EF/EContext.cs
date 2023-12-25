@@ -13,5 +13,10 @@ namespace DAL.EF
         public DbSet<Admin> Admins { get; set; }
 
         public DbSet<Student> Students { get; set; }
+
+        public DbSet<StudentPost> StudentPosts { get; set; }
+
+        public DbSet<StudentComment> StudentComments { get; set; }
+
     }
 }
