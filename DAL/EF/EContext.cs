@@ -10,6 +10,8 @@ namespace DAL.EF
 {
     public class EContext: DbContext
     {
-        public DbSet<Admin> Admins { get; set; }    
+        public DbSet<Admin> Admins { get; set; }
+
+        public DbSet<Student> Students { get; set; }
     }
 }
