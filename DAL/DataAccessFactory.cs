@@ -1,6 +1,7 @@
 ﻿using DAL.EF.Model;
 using DAL.Interface;
 using DAL.Repos;
+using DAL.Repos.DAL.Repos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,16 @@ namespace DAL
         public static IRepo<Admin, int, Admin> AdminData()
         {
             return new AdminRepo();
+        }
+
+        public static SRepo<Student, int, Student> StudentData()
+        {
+            return new StudentRepo();
+        }
+
+        public static SRepo<StudentPost, int, StudentPost> StudentPostData()
+        {
+            return new StudentPostRepo();
         }
     }
 }
