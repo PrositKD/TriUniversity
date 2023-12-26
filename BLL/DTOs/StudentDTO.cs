@@ -5,13 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.EF.Model
+namespace BLL.DTOs
 {
-    public class Student
+    public class StudentDTO
     {
-        [Key]
-        public int Id { get; set; }
 
+        public int Id { get; set; }
         [Required(ErrorMessage = "Name is required")]
         [StringLength(50, ErrorMessage = "Name cannot exceed 50 characters")]
         public string Name { get; set; }
@@ -41,15 +40,10 @@ namespace DAL.EF.Model
 
         [Required( ErrorMessage = "Invalid gender")]
         public string Gender { get; set; }
-        [Required]
-        public int Active { get; set; }
-        [Required]
-        
-        [DataType(DataType.Date, ErrorMessage = "Invalid date format")]
-        public DateTime DateOfAccount { get; set; }
 
-
+       
     }
 
    
 }
+

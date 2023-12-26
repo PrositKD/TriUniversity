@@ -59,14 +59,26 @@
     <Compile Include="EF\Model\StudentComment.cs" />
     <Compile Include="EF\Model\StudentPost.cs" />
     <Compile Include="Interface\IRepo.cs" />
+    <Compile Include="Interface\SRepo.cs" />
     <Compile Include="Migrations\202312251756441_studdentt.cs" />
     <Compile Include="Migrations\202312251756441_studdentt.designer.cs">
       <DependentUpon>202312251756441_studdentt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312251822468_studentttt.cs" />
+    <Compile Include="Migrations\202312251822468_studentttt.designer.cs">
+      <DependentUpon>202312251822468_studentttt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312261031273_newstudent.cs" />
+    <Compile Include="Migrations\202312261031273_newstudent.designer.cs">
+      <DependentUpon>202312261031273_newstudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\StudentCommentRepo.cs" />
+    <Compile Include="Repos\StudentPostRepo.cs" />
+    <Compile Include="Repos\StudentRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -75,6 +87,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202312251756441_studdentt.resx">
       <DependentUpon>202312251756441_studdentt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312251822468_studentttt.resx">
+      <DependentUpon>202312251822468_studentttt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312261031273_newstudent.resx">
+      <DependentUpon>202312261031273_newstudent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
