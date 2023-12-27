@@ -15,5 +15,9 @@ namespace DAL
         {
             return new AdminRepo();
         }
+        public static IASRepo<StudentPost, int, StudentPost> PostData()
+        {
+            return new AdminPostRepo();
+        }
     }
 }

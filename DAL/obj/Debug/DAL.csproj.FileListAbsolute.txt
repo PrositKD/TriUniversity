@@ -55,3 +55,17 @@ C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\obj\Debug\DAL.d
 C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\obj\Debug\DAL.pdb
 C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\obj\Debug\DAL.Migrations.studdentt.resources
 C:\Users\Mehedi Hasan Rabbi\Desktop\newcopy\TU\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\bin\Debug\DAL.dll.config
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\bin\Debug\DAL.dll
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\bin\Debug\DAL.pdb
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\bin\Debug\EntityFramework.dll
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\bin\Debug\EntityFramework.xml
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\obj\Debug\DAL.dll
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\obj\Debug\DAL.pdb
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\obj\Debug\DAL.Migrations.addstudent.resources
+C:\Users\asus\Desktop\New folder\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
