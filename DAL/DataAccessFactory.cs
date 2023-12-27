@@ -26,5 +26,13 @@ namespace DAL
         {
             return new StudentPostRepo();
         }
+        public static IASRepo<StudentPost, int, StudentPost> APostData()
+        {
+            return new AdminStuPostRepoRepo();
+        }
+        public static IASRepo<Student, int, Student> AStudentData()
+        {
+            return new AdminStudentRepo();
+        }
     }
 }
