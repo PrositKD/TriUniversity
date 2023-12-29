@@ -11,7 +11,9 @@ namespace DAL.Interface
 
 
 
+
         List<CLASS> Read();
+        List<CLASS> NotApprove();
 
         CLASS GetID(ID id);
         RET Update(ID id);
