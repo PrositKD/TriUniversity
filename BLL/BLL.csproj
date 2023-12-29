@@ -53,6 +53,7 @@
     <Compile Include="DTOs\StudentCommentDTO.cs" />
     <Compile Include="DTOs\StudentDTO.cs" />
     <Compile Include="DTOs\StudentPostDTO.cs" />
+    <Compile Include="DTOs\StudentUpdateDTO.cs" />
     <Compile Include="DTOs\TeacherDTO.cs" />
     <Compile Include="DTOs\TokenDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
