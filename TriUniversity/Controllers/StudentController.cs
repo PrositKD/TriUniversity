@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using static BLL.Services.StudentService;
 
 namespace TriUniversity.Controllers
 {
@@ -76,5 +77,55 @@ namespace TriUniversity.Controllers
         }
 
 
+        [HttpPut]
+        [Route("api/student/update/{studentId}")]
+        public HttpResponseMessage UpdateStudentProfile(int studentId, [FromBody] StudentUpdateDTO updatedDto)
+        {
+            try
+            {
+                var updatedData = StudentUpdateService.UpdateStudentProfile(studentId, updatedDto);
+
+                if (updatedData != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, updatedData);
+                }
+
+                return Request.CreateResponse(HttpStatusCode.NotFound, "Student not found");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                Console.WriteLine($"StackTrace: {ex.StackTrace}");
+                Console.WriteLine(ex.Message);
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request");
+            }
+        }
+        [HttpDelete]
+        [Route("api/student/delete/{studentId}")]
+        public HttpResponseMessage DeleteStudentAccount(int studentId)
+        {
+            try
+            {
+                var isDeleted = StudentService.DeleteStudentAccount(studentId);
+
+                if (isDeleted)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, "Student account deleted successfully");
+                }
+
+                return Request.CreateResponse(HttpStatusCode.NotFound, "Student not found");
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError);
+            }
+        }
+
+
+
     }
 }
+
+
+
+

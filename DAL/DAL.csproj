@@ -66,9 +66,9 @@
     <Compile Include="Interface\InRepo.cs" />
     <Compile Include="Interface\IRepo.cs" />
     <Compile Include="Interface\SRepo.cs" />
-    <Compile Include="Migrations\202312290942042_sagorsWork.cs" />
-    <Compile Include="Migrations\202312290942042_sagorsWork.designer.cs">
-      <DependentUpon>202312290942042_sagorsWork.cs</DependentUpon>
+    <Compile Include="Migrations\202312291528387_rabbi.cs" />
+    <Compile Include="Migrations\202312291528387_rabbi.designer.cs">
+      <DependentUpon>202312291528387_rabbi.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,8 +88,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312290942042_sagorsWork.resx">
-      <DependentUpon>202312290942042_sagorsWork.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312291528387_rabbi.resx">
+      <DependentUpon>202312291528387_rabbi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
