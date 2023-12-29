@@ -26,11 +26,11 @@ namespace DAL
         {
             return new StudentPostRepo();
         }
-        public static IASRepo<StudentPost, int, StudentPost> APostData()
+        public static IASRepo<StudentPost, int, StudentPost, AdminAgeRangeResult> APostData()
         {
             return new AdminStuPostRepoRepo();
         }
-        public static IASRepo<Student, int, Student> AStudentData()
+        public static IASRepo<Student, int, Student, AdminAgeRangeResult> AStudentData()
         {
             return new AdminStudentRepo();
         }

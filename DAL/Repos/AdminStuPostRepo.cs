@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class AdminStuPostRepoRepo : Repo, IASRepo<StudentPost, int, StudentPost>
+    internal class AdminStuPostRepoRepo : Repo, IASRepo<StudentPost, int, StudentPost, AdminAgeRangeResult>
     {
         public bool Delete(int id)
         {
@@ -61,6 +61,30 @@ namespace DAL.Repos
             return studentPost;
         }
 
+        
+        public List<AdminAgeRangeResult> ReadMonthly()
+        {
+            try
+            {
+                var groupedData = db.StudentPosts
+                    .GroupBy(post => post.PostedBy)
+                    .Select(group => new AdminAgeRangeResult
+                    {
+                        Id = group.Key,
+                        Count = group.Count()
+                    })
+                    .ToList();
 
+              
+
+                return groupedData;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetPostedByPostCounts: {ex.Message}");
+                throw; // Rethrow the exception to indicate that an error occurred
+            }
+        }
     }
 }
+

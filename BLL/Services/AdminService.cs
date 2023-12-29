@@ -137,7 +137,22 @@ namespace BLL.Services
             var updatedDTO = mapper.Map<StudentPostDTO>(updatedEntity);
             return updatedDTO;
         }
+        public static List<PostCountDto> GetPostRange()
+        {
+            var dataAccess = DataAccessFactory.APostData();
+            var data = dataAccess.ReadMonthly();
 
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<AdminAgeRangeResult, PostCountDto>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var mappedData = mapper.Map<List<AdminAgeRangeResult>, List<PostCountDto>>(data);
+
+            return mappedData;
+        }
 
         //-----Manage Student here----
 
@@ -206,6 +221,24 @@ namespace BLL.Services
             var updatedDTO = mapper.Map<StudentDTO>(updatedEntity);
             return updatedDTO;
         }
+
+        public static List<RengeDTO> GetStudentAgeRange()
+        {
+            var dataAccess = DataAccessFactory.AStudentData();
+            var data = dataAccess.ReadMonthly();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<AdminAgeRangeResult, RengeDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var mappedData = mapper.Map<List<AdminAgeRangeResult>, List<RengeDTO>>(data);
+
+            return mappedData;
+        }
+
 
 
 
