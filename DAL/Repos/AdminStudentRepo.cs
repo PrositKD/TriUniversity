@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DAL.Repos.AdminStudentRepo;
 
 namespace DAL.Repos
 {
-    internal class AdminStudentRepo : Repo, IASRepo<Student, int, Student>
+    internal class AdminStudentRepo : Repo, IASRepo<Student, int, Student, AdminAgeRangeResult>
     {
         public bool Delete(int id)
         { // Find the StudentPost by ID
@@ -59,59 +60,77 @@ namespace DAL.Repos
             return studentPost;
         }
 
-        public List<object> ReadMonthly()
+
+
+        public List<AdminAgeRangeResult> ReadMonthly()
         {
-            var currentDate = DateTime.Today;
+            try
+            {
+                var currentDate = DateTime.Today;
 
-            var data = db.Students
-                .Where(student => student.DateOfBirth != null)
-                .GroupBy(student => CalculateAgeRange(student.DateOfBirth, currentDate))
-                .Select(group => new
-                {
-                    Range = group.Key,
-                    Count = group.Count()
-                })
-                .ToList<object>();
+                var data = db.Students
+                    .Where(student => student.DateOfBirth != null)
+                    .ToList();
 
-            return data;
+                var groupedData = data
+                    .GroupBy(student => CalculateAgeRange(student.DateOfBirth, currentDate))
+                    .Select(group => new AdminAgeRangeResult
+                    {
+                        Range = group.Key,
+                        Count = group.Count()
+                    })
+                    .ToList();
+
+                Console.WriteLine($"Number of age groups after grouping: {groupedData.Count}");
+
+                return groupedData;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in ReadMonthly: {ex.Message}");
+                throw; // Rethrow the exception to indicate that an error occurred
+            }
         }
 
-        private string CalculateAgeRange(DateTime? dateOfBirth, DateTime currentDate)
+
+
+
+        private string CalculateAgeRange(DateTime dateOfBirth, DateTime currentDate)
         {
-            if (dateOfBirth.HasValue)
+            int age = currentDate.Year - dateOfBirth.Year;
+
+            // Adjust age if birthday hasn't occurred yet this year
+            if (currentDate < dateOfBirth.AddYears(age))
             {
-                int age = currentDate.Year - dateOfBirth.Value.Year;
-
-                // Adjust age if birthday hasn't occurred yet this year
-                if (currentDate < dateOfBirth.Value.AddYears(age))
-                {
-                    age--;
-                }
-
-                // Define age ranges
-                if (age >= 15 && age < 20)
-                {
-                    return "15-19 years";
-                }
-                else if (age >= 20 && age < 25)
-                {
-                    return "20-24 years";
-                }
-                else if (age >= 25 && age <= 30)
-                {
-                    return "25-30 years";
-                }
-                else if (age > 30)
-                {
-                    return "30 and up";
-                }
-                // Handle other cases as needed
-
-                // If the age doesn't fall into any predefined range, you can handle it accordingly
+                age--;
             }
 
-            return "Unknown"; // Handle cases where DateOfBirth is null or unexpected
+            // Define age ranges
+            if (age < 15)
+            {
+                return "14 and low";
+            }
+           else if (age >= 15 && age < 20)
+            {
+                return "15-19 years";
+            }
+            else if (age >= 20 && age < 25)
+            {
+                return "20-24 years";
+            }
+            else if (age >= 25 && age <= 30)
+            {
+                return "25-30 years";
+            }
+            else if (age > 30)
+            {
+                return "30 and up";
+            }
+
+            // If the age doesn't fall into any predefined range, you can handle it accordingly
+            return "Unknown";
         }
+
 
 
     }

@@ -161,6 +161,29 @@ namespace TriUniversity.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("api/admin/post/count")]
+        public HttpResponseMessage GetPostRange()
+        {
+            try
+            {
+                var data = AdminService.GetPostRange();
+
+                if (data != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Post not found."); // Return 404 if no data is found
+                }
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
+            }
+        }
+
         //student manage
 
         [HttpGet]
@@ -274,6 +297,29 @@ namespace TriUniversity.Controllers
             catch {
                 // Log the exception
                 return Request.CreateResponse(HttpStatusCode.InternalServerError,  "An error occurred while processing the request.");
+            }
+        }
+
+        [HttpGet]
+        [Route("api/admin/student/range")]
+        public HttpResponseMessage GetStudentAgeRange()
+        {
+            try
+            {
+                var data = AdminService.GetStudentAgeRange();
+
+                if (data != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Student not found."); // Return 404 if no data is found
+                }
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
             }
         }
 

@@ -55,6 +55,7 @@
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="EF\EContext.cs" />
     <Compile Include="EF\Model\Admin.cs" />
+    <Compile Include="EF\Model\AdminAgeRangeResult.cs" />
     <Compile Include="EF\Model\Course.cs" />
     <Compile Include="EF\Model\Student.cs" />
     <Compile Include="EF\Model\StudentComment.cs" />
@@ -66,9 +67,9 @@
     <Compile Include="Interface\InRepo.cs" />
     <Compile Include="Interface\IRepo.cs" />
     <Compile Include="Interface\SRepo.cs" />
-    <Compile Include="Migrations\202312291528387_rabbi.cs" />
-    <Compile Include="Migrations\202312291528387_rabbi.designer.cs">
-      <DependentUpon>202312291528387_rabbi.cs</DependentUpon>
+    <Compile Include="Migrations\202312291541012_InitDb.cs" />
+    <Compile Include="Migrations\202312291541012_InitDb.designer.cs">
+      <DependentUpon>202312291541012_InitDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,8 +89,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312291528387_rabbi.resx">
-      <DependentUpon>202312291528387_rabbi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312291541012_InitDb.resx">
+      <DependentUpon>202312291541012_InitDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

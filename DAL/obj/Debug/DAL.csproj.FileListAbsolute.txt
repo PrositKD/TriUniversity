@@ -107,8 +107,6 @@ C:\Users\asus\Desktop\New folder (2)\New folder\TriUniversity\DAL\bin\Debug\Enti
 C:\Users\asus\Desktop\New folder (2)\New folder\TriUniversity\DAL\bin\Debug\EntityFramework.xml
 C:\Users\asus\Desktop\New folder (2)\New folder\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\asus\Desktop\New folder (2)\New folder\TriUniversity\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-C:\Users\asus\Desktop\New folder (2)\New folder\TriUniversity\DAL\obj\Debug\DAL.Migrations.sagorsWork.resources
-C:\Users\asus\Desktop\New folder (2)\New folder\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 C:\Users\asus\Desktop\New folder (2)\New folder\TriUniversity\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\asus\Desktop\New folder (2)\New folder\TriUniversity\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\asus\Desktop\New folder (2)\New folder\TriUniversity\DAL\obj\Debug\DAL.dll
@@ -127,3 +125,5 @@ C:\Users\Mehedi Hasan Rabbi\Desktop\TU5\TriUniversity\DAL\obj\Debug\DAL.dll
 C:\Users\Mehedi Hasan Rabbi\Desktop\TU5\TriUniversity\DAL\obj\Debug\DAL.pdb
 C:\Users\Mehedi Hasan Rabbi\Desktop\TU5\TriUniversity\DAL\obj\Debug\DAL.Migrations.rabbi.resources
 C:\Users\Mehedi Hasan Rabbi\Desktop\TU5\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\asus\Desktop\New folder (2)\New folder\TriUniversity\DAL\obj\Debug\DAL.Migrations.InitDb.resources
+C:\Users\asus\Desktop\New folder (2)\New folder\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache

@@ -50,6 +50,8 @@
     <Compile Include="DTOs\CourseDTO.cs" />
     <Compile Include="DTOs\loginModel.cs" />
     <Compile Include="DTOs\PostCommentDto.cs" />
+    <Compile Include="DTOs\PostCountDto.cs" />
+    <Compile Include="DTOs\RengeDTO.cs" />
     <Compile Include="DTOs\StudentCommentDTO.cs" />
     <Compile Include="DTOs\StudentDTO.cs" />
     <Compile Include="DTOs\StudentPostDTO.cs" />
