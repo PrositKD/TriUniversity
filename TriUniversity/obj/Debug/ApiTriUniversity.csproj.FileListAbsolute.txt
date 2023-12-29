@@ -386,3 +386,7 @@ C:\Users\asus\Desktop\New folder\New folder\TriUniversity\TriUniversity\obj\Debu
 C:\Users\asus\Desktop\New folder\New folder\TriUniversity\TriUniversity\obj\Debug\ApiTriUniversity.csproj.CopyComplete
 C:\Users\asus\Desktop\New folder\New folder\TriUniversity\TriUniversity\obj\Debug\TriUniversity.dll
 C:\Users\asus\Desktop\New folder\New folder\TriUniversity\TriUniversity\obj\Debug\TriUniversity.pdb
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\TriUniversity\obj\Debug\ApiTriUniversity.csproj.AssemblyReference.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\TriUniversity\obj\Debug\ApiTriUniversity.csproj.CoreCompileInputs.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\TriUniversity\obj\Debug\TriUniversity.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\TriUniversity\obj\Debug\TriUniversity.pdb

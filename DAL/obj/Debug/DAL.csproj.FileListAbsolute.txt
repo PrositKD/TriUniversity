@@ -85,3 +85,17 @@ C:\Users\asus\Desktop\New folder\New folder\TriUniversity\DAL\obj\Debug\DAL.dll
 C:\Users\asus\Desktop\New folder\New folder\TriUniversity\DAL\obj\Debug\DAL.pdb
 C:\Users\asus\Desktop\New folder\New folder\TriUniversity\DAL\obj\Debug\DAL.Migrations.addstudent.resources
 C:\Users\asus\Desktop\New folder\New folder\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\bin\Debug\DAL.dll.config
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\bin\Debug\DAL.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\bin\Debug\DAL.pdb
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\obj\Debug\DAL.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\obj\Debug\DAL.pdb
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\obj\Debug\DAL.Migrations.sagorsWork.resources
+C:\Users\Aminul Islam Sagor\Desktop\dot net\updated\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
