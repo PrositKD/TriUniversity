@@ -35,13 +35,13 @@ namespace DAL.Repos
 
     public List<StudentPost> Read()
     {
-        var data = db.StudentPosts.Where(studentPost => studentPost.Approve == 0).ToList();
+        var data = db.StudentPosts.Where(studentPost => studentPost.Approve == 1).ToList();
 
         return data;
     }
-    public List<StudentPost> ApprovePosts()
+    public List<StudentPost> NotApprove()
     {
-        var data = db.StudentPosts.Where(studentPost => studentPost.Approve == 1).ToList();
+        var data = db.StudentPosts.Where(studentPost => studentPost.Approve == 0).ToList();
 
         return data;
     }

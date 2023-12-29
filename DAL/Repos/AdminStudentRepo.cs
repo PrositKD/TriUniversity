@@ -37,7 +37,7 @@ namespace DAL.Repos
 
             return data;
         }
-        public List<Student> ReadBlock()
+        public List<Student> NotApprove()
         {
             var data = db.Students.Where(student => student.Active == 0).ToList();
 

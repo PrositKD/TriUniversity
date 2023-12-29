@@ -72,6 +72,142 @@ namespace BLL.Services
         }
 
 
+        //-----Manage Student Post here----
+        public static StudentPostDTO GetPost(int id)
+        {
+            var data = DataAccessFactory.APostData().GetID(id);
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<StudentPost, PostCommentDto>();
+                cfg.CreateMap<StudentComment, StudentCommentDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var postDTOs = mapper.Map<PostCommentDto>(data);
+            return postDTOs;
+        }
+
+        public static List<StudentPostDTO> GetApprovePosts()
+        {
+            var data = DataAccessFactory.APostData().Read();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<StudentPost, StudentPostDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var postDTOs = mapper.Map<List<StudentPostDTO>>(data);
+            return postDTOs;
+        }
+        public static List<StudentPostDTO> GetNotApprovePosts()
+        {
+            var data = DataAccessFactory.APostData().NotApprove();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<StudentPost, StudentPostDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var postDTOs = mapper.Map<List<StudentPostDTO>>(data);
+            return postDTOs;
+        }
+        public static bool DeletePost(int id)
+        {
+            var dataAccess = DataAccessFactory.APostData();
+            return dataAccess.Delete(id);
+        }
+
+        public static StudentPostDTO UpdatePostApproval(int id)
+        {
+            var dataAccess = DataAccessFactory.APostData();
+            var updatedEntity = dataAccess.Update(id);
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<StudentPost, StudentPostDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var updatedDTO = mapper.Map<StudentPostDTO>(updatedEntity);
+            return updatedDTO;
+        }
+
+
+        //-----Manage Student here----
+
+        public static StudentDTO GetStudent(int id)
+        {
+            var data = DataAccessFactory.AStudentData().GetID(id);
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Student, StudentDTO>();
+               
+            });
+
+            var mapper = new Mapper(config);
+
+            var postDTOs = mapper.Map<StudentDTO>(data);
+            return postDTOs;
+        }
+
+        public static List<StudentDTO> GetApproveStudents()
+        {
+            var data = DataAccessFactory.AStudentData().Read();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Student, StudentDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var postDTOs = mapper.Map<List<StudentDTO>>(data);
+            return postDTOs;
+        }
+        public static List<StudentDTO> GetNotApproveStudents()
+        {
+            var data = DataAccessFactory.AStudentData().NotApprove();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Student, StudentDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var postDTOs = mapper.Map<List<StudentDTO>>(data);
+            return postDTOs;
+        }
+        public static bool DeleteStudent(int id)
+        {
+            var dataAccess = DataAccessFactory.AStudentData();
+            return dataAccess.Delete(id);
+        }
+
+        public static StudentDTO UpdateStudentApproval(int id)
+        {
+            var dataAccess = DataAccessFactory.AStudentData();
+            var updatedEntity = dataAccess.Update(id);
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Student, StudentDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var updatedDTO = mapper.Map<StudentDTO>(updatedEntity);
+            return updatedDTO;
+        }
+
 
 
     }
