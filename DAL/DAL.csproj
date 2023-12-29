@@ -55,33 +55,41 @@
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="EF\EContext.cs" />
     <Compile Include="EF\Model\Admin.cs" />
+    <Compile Include="EF\Model\Course.cs" />
     <Compile Include="EF\Model\Student.cs" />
     <Compile Include="EF\Model\StudentComment.cs" />
     <Compile Include="EF\Model\StudentPost.cs" />
+    <Compile Include="EF\Model\Teacher.cs" />
+    <Compile Include="EF\Model\Token.cs" />
     <Compile Include="Interface\IASRepo.cs" />
+    <Compile Include="Interface\IAuth.cs" />
+    <Compile Include="Interface\InRepo.cs" />
     <Compile Include="Interface\IRepo.cs" />
     <Compile Include="Interface\SRepo.cs" />
-    <Compile Include="Migrations\202312271641247_addstudent.cs" />
-    <Compile Include="Migrations\202312271641247_addstudent.designer.cs">
-      <DependentUpon>202312271641247_addstudent.cs</DependentUpon>
+    <Compile Include="Migrations\202312290942042_sagorsWork.cs" />
+    <Compile Include="Migrations\202312290942042_sagorsWork.designer.cs">
+      <DependentUpon>202312290942042_sagorsWork.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="Repos\AdminStudentRepo.cs" />
     <Compile Include="Repos\AdminStuPostRepo.cs" />
+    <Compile Include="Repos\CourseRepo.cs" />
+    <Compile Include="Repos\InstructorRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\StudentCommentRepo.cs" />
     <Compile Include="Repos\StudentPostRepo.cs" />
     <Compile Include="Repos\StudentRepo.cs" />
+    <Compile Include="Repos\TokenRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312271641247_addstudent.resx">
-      <DependentUpon>202312271641247_addstudent.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312290942042_sagorsWork.resx">
+      <DependentUpon>202312290942042_sagorsWork.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
