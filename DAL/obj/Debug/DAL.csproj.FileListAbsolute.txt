@@ -71,3 +71,20 @@ C:\Users\Mehedi Hasan Rabbi\Desktop\ttuu\TriUniversity\DAL\obj\Debug\DAL.dll
 C:\Users\Mehedi Hasan Rabbi\Desktop\ttuu\TriUniversity\DAL\obj\Debug\DAL.pdb
 C:\Users\Mehedi Hasan Rabbi\Desktop\ttuu\TriUniversity\DAL\obj\Debug\DAL.Migrations.studentttt.resources
 C:\Users\Mehedi Hasan Rabbi\Desktop\ttuu\TriUniversity\DAL\obj\Debug\DAL.Migrations.newstudent.resources
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\bin\Debug\DAL.dll.config
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\bin\Debug\DAL.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\bin\Debug\DAL.pdb
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\obj\Debug\DAL.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\obj\Debug\DAL.pdb
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\obj\Debug\DAL.Migrations.sagor.resources
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\obj\Debug\DAL.Migrations.tokendb.resources
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\obj\Debug\DAL.Migrations.courseTable.resources
+C:\Users\Aminul Islam Sagor\Desktop\dot net\TriUniversity\DAL\obj\Debug\DAL.Migrations.forcourse.resources

@@ -26,5 +26,25 @@ namespace DAL
         {
             return new StudentPostRepo();
         }
+
+        public static InRepo<Teacher, string, Teacher> InstructorData()
+        {
+            return new InstructorRepo();
+        }
+
+        public static IAuth<bool> AuthicateData()
+        {
+            return new InstructorRepo();
+        }
+
+        public static InRepo<Token, string, Token> TokenData()
+        {
+            return new TokenRepo();
+        }
+
+        public static InRepo<Course, string, Course> CourseData()
+        {
+            return new CourseRepo();
+        }
     }
 }

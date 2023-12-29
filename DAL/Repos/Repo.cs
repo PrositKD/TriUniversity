@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class Repo
+    public class Repo
     {
         protected EContext db;
         protected Repo()

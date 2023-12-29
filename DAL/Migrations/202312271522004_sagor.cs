@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class studdentt : DbMigration
+    public partial class sagor : DbMigration
     {
         public override void Up()
         {
@@ -46,8 +46,9 @@
                         InstitutionName = c.String(maxLength: 100),
                         Address = c.String(maxLength: 255),
                         Password = c.String(nullable: false, maxLength: 50),
-                        Gender = c.Int(nullable: false),
+                        Gender = c.String(nullable: false),
                         Active = c.Int(nullable: false),
+                        DateOfAccount = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -66,6 +67,20 @@
                 .ForeignKey("dbo.Students", t => t.PostedBy, cascadeDelete: true)
                 .Index(t => t.PostedBy);
             
+            CreateTable(
+                "dbo.Teachers",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        name = c.String(),
+                        email = c.String(),
+                        gender = c.String(),
+                        profession = c.String(),
+                        universityName = c.String(),
+                        password = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
@@ -76,6 +91,7 @@
             DropIndex("dbo.StudentPosts", new[] { "PostedBy" });
             DropIndex("dbo.StudentComments", new[] { "Student_Id" });
             DropIndex("dbo.StudentComments", new[] { "PostId" });
+            DropTable("dbo.Teachers");
             DropTable("dbo.StudentPosts");
             DropTable("dbo.Students");
             DropTable("dbo.StudentComments");
