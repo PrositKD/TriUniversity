@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class AdminRepo : Repo, IRepo<Admin, int, Admin>
+    internal class AdminRepo : Repo, IRepo<Admin, int, Admin,String>, SAuth<bool>
     {
         public Admin Add(Admin obj)
         {
@@ -28,7 +28,24 @@ namespace DAL.Repos
 
             return data;
         }
+        public bool Authenticatee(string Email, string password)
+        {
+            var data = db.Admins.FirstOrDefault(e => e.Email.Equals(Email) && e.Password.Equals(password));
 
-      
+            if (data != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public Admin Reademail(string id)
+        {
+
+            return db.Admins.Where(student => student.Email == id).FirstOrDefault();
+        }
     }
 }

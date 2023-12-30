@@ -141,3 +141,17 @@ C:\Users\Mehedi Hasan Rabbi\Desktop\TU9\TriUniversity\DAL\obj\Debug\DAL.dll
 C:\Users\Mehedi Hasan Rabbi\Desktop\TU9\TriUniversity\DAL\obj\Debug\DAL.pdb
 C:\Users\Mehedi Hasan Rabbi\Desktop\TU9\TriUniversity\DAL\obj\Debug\DAL.Migrations.rabbilog.resources
 C:\Users\Mehedi Hasan Rabbi\Desktop\TU9\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\bin\Debug\DAL.dll.config
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\bin\Debug\DAL.dll
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\bin\Debug\DAL.pdb
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\bin\Debug\EntityFramework.dll
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\bin\Debug\EntityFramework.xml
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\obj\Debug\DAL.dll
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\obj\Debug\DAL.pdb
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\obj\Debug\DAL.Migrations.admin.resources
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
