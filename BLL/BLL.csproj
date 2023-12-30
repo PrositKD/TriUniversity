@@ -49,6 +49,7 @@
     <Compile Include="DTOs\AdminDTO.cs" />
     <Compile Include="DTOs\CourseDTO.cs" />
     <Compile Include="DTOs\loginModel.cs" />
+    <Compile Include="DTOs\OrderCourseDTO.cs" />
     <Compile Include="DTOs\PostCommentDto.cs" />
     <Compile Include="DTOs\PostCountDto.cs" />
     <Compile Include="DTOs\RengeDTO.cs" />

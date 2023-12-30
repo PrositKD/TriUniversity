@@ -57,6 +57,7 @@
     <Compile Include="EF\Model\Admin.cs" />
     <Compile Include="EF\Model\AdminAgeRangeResult.cs" />
     <Compile Include="EF\Model\Course.cs" />
+    <Compile Include="EF\Model\Order.cs" />
     <Compile Include="EF\Model\Student.cs" />
     <Compile Include="EF\Model\StudentComment.cs" />
     <Compile Include="EF\Model\StudentPost.cs" />
@@ -72,6 +73,10 @@
     <Compile Include="Migrations\202312301405089_rabbiviewcourse.cs" />
     <Compile Include="Migrations\202312301405089_rabbiviewcourse.designer.cs">
       <DependentUpon>202312301405089_rabbiviewcourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312301518114_order.cs" />
+    <Compile Include="Migrations\202312301518114_order.designer.cs">
+      <DependentUpon>202312301518114_order.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +99,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202312301405089_rabbiviewcourse.resx">
       <DependentUpon>202312301405089_rabbiviewcourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312301518114_order.resx">
+      <DependentUpon>202312301518114_order.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

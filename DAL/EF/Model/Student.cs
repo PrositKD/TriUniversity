@@ -47,8 +47,7 @@ namespace DAL.EF.Model
         
         [DataType(DataType.Date, ErrorMessage = "Invalid date format")]
         public DateTime DateOfAccount { get; set; }
-
-
+        public object Courses { get; internal set; }
     }
 
    

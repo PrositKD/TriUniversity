@@ -2,6 +2,7 @@
 using BLL.DTOs;
 using DAL;
 using DAL.EF.Model;
+using System;
 using System.Collections.Generic;
 
 namespace BLL.Services
@@ -23,7 +24,17 @@ namespace BLL.Services
             var courseDTOs = mapper.Map<List<StudentCourseDTO>>(data);
             return courseDTOs;
         }
+
+        public static bool BuyCourse(int studentId, int courseId)
+        {
+            var studentCourseRepo = DataAccessFactory.StudentCourseData();
+
+            var isCourseBought = studentCourseRepo.BuyCourse(studentId, courseId);
+
+
+            return isCourseBought;
+        }
+
+      
     }
 }
-
-
