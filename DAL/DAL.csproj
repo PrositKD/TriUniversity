@@ -67,10 +67,11 @@
     <Compile Include="Interface\InRepo.cs" />
     <Compile Include="Interface\IRepo.cs" />
     <Compile Include="Interface\SAuth.cs" />
+    <Compile Include="Interface\SCoRepo.cs" />
     <Compile Include="Interface\SRepo.cs" />
-    <Compile Include="Migrations\202312301054329_admin.cs" />
-    <Compile Include="Migrations\202312301054329_admin.designer.cs">
-      <DependentUpon>202312301054329_admin.cs</DependentUpon>
+    <Compile Include="Migrations\202312301405089_rabbiviewcourse.cs" />
+    <Compile Include="Migrations\202312301405089_rabbiviewcourse.designer.cs">
+      <DependentUpon>202312301405089_rabbiviewcourse.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Repos\InstructorRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\StudentCommentRepo.cs" />
+    <Compile Include="Repos\StudentCourseRepo.cs" />
     <Compile Include="Repos\StudentPostRepo.cs" />
     <Compile Include="Repos\StudentRepo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
@@ -90,8 +92,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312301054329_admin.resx">
-      <DependentUpon>202312301054329_admin.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312301405089_rabbiviewcourse.resx">
+      <DependentUpon>202312301405089_rabbiviewcourse.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
