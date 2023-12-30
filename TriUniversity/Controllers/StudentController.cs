@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
+using TriUniversity.Auth;
 using static BLL.Services.StudentService;
 
 namespace TriUniversity.Controllers
@@ -40,7 +42,7 @@ namespace TriUniversity.Controllers
             try
             {
                 // Access properties from the DTO (newsDto) and perform actions accordingly
-                var data =StudentPostService.GetPosts(studentid);
+                var data = StudentPostService.GetPosts(studentid);
                 if (data != null)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, data);
@@ -54,6 +56,7 @@ namespace TriUniversity.Controllers
 
             }
         }
+        [Logged]
         [HttpGet]
         [Route("api/student/post/{postid}")]
         public HttpResponseMessage Getpostbyid(int postid)
@@ -118,6 +121,61 @@ namespace TriUniversity.Controllers
             catch
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
+            }
+        }
+        [HttpPost]
+        [Route("api/student/login")]
+        public HttpResponseMessage Login(SLoginModel login)
+        {
+            try
+            {
+                var res = SAuthService.Authenticatee(login.Email, login.Password);
+
+                if (res != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, res);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "User not found" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
+            }
+
+
+
+        }
+        [HttpPost]
+        [Route("api/student/logout")]
+        public HttpResponseMessage Logout()
+        {
+            try
+            {
+                // Retrieve the token from the request header
+                var token = HttpContext.Current.Request.Headers["Authorization"];
+
+                if (token == null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = "Token not provided in the header" });
+                }
+
+                var isLoggedOut = SAuthService.Logout(token);
+
+                if (isLoggedOut)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Logout successful" });
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Token not found or unable to logout" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
             }
         }
 

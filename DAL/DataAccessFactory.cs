@@ -17,12 +17,12 @@ namespace DAL
             return new AdminRepo();
         }
 
-        public static SRepo<Student, int, Student> StudentData()
+        public static SRepo<Student, int, Student, string> StudentData()
         {
             return new StudentRepo();
         }
 
-        public static SRepo<StudentPost, int, StudentPost> StudentPostData()
+        public static SRepo<StudentPost, int, StudentPost, string> StudentPostData()
         {
             return new StudentPostRepo();
         }
@@ -53,6 +53,10 @@ namespace DAL
         public static InRepo<Course, string, Course> CourseData()
         {
             return new CourseRepo();
+        }
+        public static SAuth<bool> AuthicateeData()
+        {
+            return new StudentRepo();
         }
     }
 }

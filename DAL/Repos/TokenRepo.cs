@@ -30,7 +30,7 @@ namespace DAL.Repos
 
         public Token get(string key)
         {
-            throw new NotImplementedException();
+            return db.Tokens.Where(st=> st.TKey == key).FirstOrDefault();
         }
 
         public bool update(Token obj)

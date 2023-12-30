@@ -7,13 +7,13 @@ namespace DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitDb : IMigrationMetadata
+    public sealed partial class rabbilog : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitDb));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(rabbilog));
         
         string IMigrationMetadata.Id
         {
-            get { return "202312291541012_InitDb"; }
+            get { return "202312300524321_rabbilog"; }
         }
         
         string IMigrationMetadata.Source
