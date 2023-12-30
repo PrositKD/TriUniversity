@@ -177,10 +177,26 @@ namespace TriUniversity.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
             }
+
+
         }
+        [HttpGet]
+        [Route("api/courses")]
+        public HttpResponseMessage GetAllCourses()
+        {
+            try
+            {
+                var data = StudentCourseService.GetAllCourses();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError);
+            }
 
 
 
+        }
     }
 }
 

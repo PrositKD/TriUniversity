@@ -62,5 +62,9 @@ namespace DAL
         {
             return new AdminRepo();
         }
+        public static SCoRepo<Course, int, bool, int> StudentCourseData()
+        {
+            return new StudentCourseRepo();
+        }
     }
 }

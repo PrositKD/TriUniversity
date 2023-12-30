@@ -54,6 +54,7 @@
     <Compile Include="DTOs\RengeDTO.cs" />
     <Compile Include="DTOs\SLoginModel.cs" />
     <Compile Include="DTOs\StudentCommentDTO.cs" />
+    <Compile Include="DTOs\StudentCourseDTO.cs" />
     <Compile Include="DTOs\StudentDTO.cs" />
     <Compile Include="DTOs\StudentPostDTO.cs" />
     <Compile Include="DTOs\StudentUpdateDTO.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Services\CourseService.cs" />
     <Compile Include="Services\InstructorService.cs" />
     <Compile Include="Services\SAuthService.cs" />
+    <Compile Include="Services\StudentCourseService.cs" />
     <Compile Include="Services\StudentPostService.cs" />
     <Compile Include="Services\StudentService.cs" />
   </ItemGroup>
