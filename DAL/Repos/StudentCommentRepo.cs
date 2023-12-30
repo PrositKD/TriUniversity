@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class StudentCommentRepo : Repo, SRepo<StudentComment, int, StudentComment>
+    internal class StudentCommentRepo : Repo, SRepo<StudentComment, int, StudentComment,string>
     {
         public StudentComment Create(StudentComment obj)
         {
@@ -31,6 +31,11 @@ namespace DAL.Repos
         }
 
         public StudentComment Read(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public StudentComment Reademail(string id)
         {
             throw new NotImplementedException();
         }

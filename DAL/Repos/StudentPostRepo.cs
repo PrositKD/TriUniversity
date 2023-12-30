@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class StudentPostRepo : Repo, SRepo<StudentPost, int, StudentPost>
+    internal class StudentPostRepo : Repo, SRepo<StudentPost, int, StudentPost,string>
     {
         public StudentPost Create(StudentPost obj)
         {
@@ -60,6 +60,11 @@ namespace DAL.Repos
         }
 
         public List<StudentPost> GetPost(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public StudentPost Reademail(string id)
         {
             throw new NotImplementedException();
         }
