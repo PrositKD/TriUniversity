@@ -58,5 +58,9 @@ namespace DAL
         {
             return new StudentRepo();
         }
+        public static SCoRepo<Course, int, bool, int> StudentCourseData()
+        {
+            return new StudentCourseRepo();
+        }
     }
 }

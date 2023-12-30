@@ -67,6 +67,7 @@
     <Compile Include="Interface\InRepo.cs" />
     <Compile Include="Interface\IRepo.cs" />
     <Compile Include="Interface\SAuth.cs" />
+    <Compile Include="Interface\SCoRepo.cs" />
     <Compile Include="Interface\SRepo.cs" />
     <Compile Include="Migrations\202312300524321_rabbilog.cs" />
     <Compile Include="Migrations\202312300524321_rabbilog.designer.cs">
@@ -81,6 +82,7 @@
     <Compile Include="Repos\InstructorRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\StudentCommentRepo.cs" />
+    <Compile Include="Repos\StudentCourseRepo.cs" />
     <Compile Include="Repos\StudentPostRepo.cs" />
     <Compile Include="Repos\StudentRepo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
