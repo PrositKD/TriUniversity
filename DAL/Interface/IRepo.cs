@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Interface
 {
-    public interface IRepo<CLASS, ID, RET>
+    public interface IRepo<CLASS, ID, RET,ID2>
     {
 
 
@@ -14,7 +14,7 @@ namespace DAL.Interface
         RET Get(CLASS obj);
         bool Delete(ID id);
         RET Add(CLASS obj);
-        
+        CLASS Reademail(ID2 id);
 
     }
 }

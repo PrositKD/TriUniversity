@@ -12,7 +12,7 @@ namespace DAL
 {
     public class DataAccessFactory
     {
-        public static IRepo<Admin, int, Admin> AdminData()
+        public static IRepo<Admin, int, Admin, String> AdminData()
         {
             return new AdminRepo();
         }
@@ -57,6 +57,10 @@ namespace DAL
         public static SAuth<bool> AuthicateeData()
         {
             return new StudentRepo();
+        }
+        public static SAuth<bool> AdminAuthicateeData()
+        {
+            return new AdminRepo();
         }
     }
 }

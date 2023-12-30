@@ -68,9 +68,9 @@
     <Compile Include="Interface\IRepo.cs" />
     <Compile Include="Interface\SAuth.cs" />
     <Compile Include="Interface\SRepo.cs" />
-    <Compile Include="Migrations\202312300524321_rabbilog.cs" />
-    <Compile Include="Migrations\202312300524321_rabbilog.designer.cs">
-      <DependentUpon>202312300524321_rabbilog.cs</DependentUpon>
+    <Compile Include="Migrations\202312301054329_admin.cs" />
+    <Compile Include="Migrations\202312301054329_admin.designer.cs">
+      <DependentUpon>202312301054329_admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,8 +90,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312300524321_rabbilog.resx">
-      <DependentUpon>202312300524321_rabbilog.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312301054329_admin.resx">
+      <DependentUpon>202312301054329_admin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

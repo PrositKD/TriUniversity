@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
+using TriUniversity.Auth;
 
 namespace TriUniversity.Controllers
 {
@@ -28,7 +30,7 @@ namespace TriUniversity.Controllers
 
         }
         [HttpPost]
-        [Route("api/admin/login")]
+        [Route("api/adminn/login")]
         public HttpResponseMessage GetAdmin([FromBody] AdminDTO adminDto)
         {
             try
@@ -43,6 +45,60 @@ namespace TriUniversity.Controllers
             }
 
         }
+        [HttpPost]
+        [Route("api/admin/login")]
+        public HttpResponseMessage Login([FromBody] AdminDTO adminDto)
+        {
+            try
+            {
+                var res = AdminAuthService.Authenticatee(adminDto.Email, adminDto.Password);
+
+                if (res != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, res);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Admin not found" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        [Route("api/admin/logout")]
+        public HttpResponseMessage Logout()
+        {
+            try
+            {
+                // Retrieve the token from the request header
+                var token = HttpContext.Current.Request.Headers["Authorization"];
+
+                if (token == null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, new { Message = "Token not provided in the header" });
+                }
+
+                var isLoggedOut = AdminAuthService.Logout(token);
+
+                if (isLoggedOut)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Logout successful" });
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "Token not found or unable to logout" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
+            }
+        }
+
         //student post manage
 
         [HttpGet]
@@ -160,7 +216,7 @@ namespace TriUniversity.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError,  "An error occurred while processing the request.");
             }
         }
-
+        [ALoged]
         [HttpGet]
         [Route("api/admin/post/count")]
         public HttpResponseMessage GetPostRange()

@@ -124,3 +124,17 @@ C:\Users\Mehedi Hasan Rabbi\Desktop\TU9\TriUniversity\BLL\bin\Debug\DAL.dll.conf
 C:\Users\Mehedi Hasan Rabbi\Desktop\TU9\TriUniversity\BLL\bin\Debug\AutoMapper.xml
 C:\Users\Mehedi Hasan Rabbi\Desktop\TU9\TriUniversity\BLL\bin\Debug\EntityFramework.xml
 C:\Users\Mehedi Hasan Rabbi\Desktop\TU9\TriUniversity\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\bin\Debug\BLL.dll
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\bin\Debug\BLL.pdb
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\bin\Debug\AutoMapper.dll
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\bin\Debug\DAL.dll
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\bin\Debug\EntityFramework.dll
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\bin\Debug\DAL.pdb
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\bin\Debug\DAL.dll.config
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\bin\Debug\AutoMapper.xml
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\bin\Debug\EntityFramework.xml
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\obj\Debug\BLL.dll
+C:\Users\asus\Desktop\New folder (2)\New folder (2)\TriUniversity\BLL\obj\Debug\BLL.pdb
