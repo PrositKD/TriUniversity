@@ -23,5 +23,7 @@ namespace DAL.EF
         public DbSet<Token> Tokens { get; set; }
         public DbSet<Course> Courses { get; set; }
 
+        public DbSet<Order> Orders { get; set; }
+
     }
 }

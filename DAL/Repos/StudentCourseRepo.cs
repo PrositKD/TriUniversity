@@ -34,13 +34,29 @@ namespace DAL.Repos
 
             if (student != null && course != null)
             {
-                db.Courses.Add(course);
+                // Add the course to the student's Courses collection
+              
+
+                // Create an order entry with the date of buying
+                var newOrder = new Order
+                {
+                    StudentId = studentId,
+                    CourseId = courseId,
+                    DateOfBuying = DateTime.Now
+                };
+
+                // Add the order to the Orders table
+                db.Orders.Add(newOrder);
+
+                // Save changes to the database
                 db.SaveChanges();
+
                 return true;
             }
 
             return false;
         }
+
 
         public bool Delete(int id)
         {

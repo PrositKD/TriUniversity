@@ -194,11 +194,35 @@ namespace TriUniversity.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
             }
 
-
-
         }
+
+        [HttpPost]
+        [Route("api/student/buy-course")]
+        public HttpResponseMessage BuyCourse([FromBody] OrderCourseDTO orderDTO)
+        {
+            try
+            {
+                var isBought = StudentCourseService.BuyCourse(orderDTO.StudentId, orderDTO.CourseId);
+
+                if (isBought)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, "Course bought successfully");
+                }
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Failed to buy the course");
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError);
+            }
+        }
+
+
     }
-}
+}   
+
+
+
 
 
 
