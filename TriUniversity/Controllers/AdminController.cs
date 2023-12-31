@@ -541,6 +541,29 @@ namespace TriUniversity.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
             }
         }
+        [ALoged]
+        [HttpGet]
+        [Route("api/admin/Course/totalsale")]
+        public HttpResponseMessage GetCourseSale()
+        {
+            try
+            {
+                var data = AdminService.GetCourseSale();
+
+                if (data != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Course sale not found."); // Return 404 if no data is found
+                }
+            }
+            catch(Exception ex) 
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
 
 
     }

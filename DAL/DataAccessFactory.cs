@@ -71,5 +71,9 @@ namespace DAL
         {
             return new AdminCourseRepo();
         }
+        public static IACSRepo<AdminCourseStatistics> ACourseDataS()
+        {
+            return new AdminCourseRepo();
+        }
     }
 }
