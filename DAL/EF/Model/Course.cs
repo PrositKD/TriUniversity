@@ -27,8 +27,8 @@ namespace DAL.EF.Model
         public string InstructorName { get; set; }
 
         [Required(ErrorMessage = "Price is required")]
-        [Range(0, double.MaxValue, ErrorMessage = "Price must be a non-negative value")]
-        public decimal Price { get; set; }
+      
+        public int Price { get; set; }
 
         [Required(ErrorMessage = "Duration is required")]
         [Range(1, int.MaxValue, ErrorMessage = "Duration must be a positive value")]

@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class AdminCourseRepo : Repo, IASRepo<Course, int, Course, AdminAgeRangeResult>
+    internal class AdminCourseRepo : Repo, IASRepo<Course, int, Course, AdminAgeRangeResult>, IACSRepo<AdminCourseStatistics>
+
     {
         public bool Delete(int id)
         {
@@ -24,6 +25,8 @@ namespace DAL.Repos
 
             return false;
         }
+
+      
 
         public Course GetID(int id)
         {
@@ -80,5 +83,25 @@ namespace DAL.Repos
 
             return studentPost;
         }
+
+
+        public List<AdminCourseStatistics> GetAllCourseStatistics()
+        {
+            var courseStatistics = db.Orders
+                .GroupBy(order => order.CourseId)
+                .Select(group => new AdminCourseStatistics
+                {
+                    CourseId = group.Key,
+                    TotalCount = group.Count(),
+                    TotalSalePrice = db.Courses
+                        .Where(c => c.Id == group.Key)
+                        .Select(c => c.Price)
+                        .FirstOrDefault() * group.Count()
+                })
+                .ToList();
+
+            return courseStatistics;
+        }
+
     }
 }

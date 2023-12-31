@@ -322,6 +322,22 @@ namespace BLL.Services
             return mappedData;
         }
 
+        public static List<AdminCourseStatisticsDto> GetCourseSale()
+        {
+            var dataAccess = DataAccessFactory.ACourseDataS().GetAllCourseStatistics();
+            
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<AdminCourseStatistics, AdminCourseStatisticsDto>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var mappedData = mapper.Map<List<AdminCourseStatisticsDto>>(dataAccess);
+
+            return mappedData;
+        }
 
     }
 }

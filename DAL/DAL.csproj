@@ -56,13 +56,16 @@
     <Compile Include="EF\EContext.cs" />
     <Compile Include="EF\Model\Admin.cs" />
     <Compile Include="EF\Model\AdminAgeRangeResult.cs" />
+    <Compile Include="EF\Model\AdminCourseStatistics.cs" />
     <Compile Include="EF\Model\Course.cs" />
     <Compile Include="EF\Model\Order.cs" />
     <Compile Include="EF\Model\Student.cs" />
     <Compile Include="EF\Model\StudentComment.cs" />
+    <Compile Include="EF\Model\StudentMgs.cs" />
     <Compile Include="EF\Model\StudentPost.cs" />
     <Compile Include="EF\Model\Teacher.cs" />
     <Compile Include="EF\Model\Token.cs" />
+    <Compile Include="Interface\IACSRepo.cs" />
     <Compile Include="Interface\IASRepo.cs" />
     <Compile Include="Interface\IAuth.cs" />
     <Compile Include="Interface\InRepo.cs" />
@@ -73,6 +76,18 @@
     <Compile Include="Migrations\202312310604243_AddData.cs" />
     <Compile Include="Migrations\202312310604243_AddData.designer.cs">
       <DependentUpon>202312310604243_AddData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312311834248_Addprice.cs" />
+    <Compile Include="Migrations\202312311834248_Addprice.designer.cs">
+      <DependentUpon>202312311834248_Addprice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312311857454_Addprices.cs" />
+    <Compile Include="Migrations\202312311857454_Addprices.designer.cs">
+      <DependentUpon>202312311857454_Addprices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312311928296_Addmgs.cs" />
+    <Compile Include="Migrations\202312311928296_Addmgs.designer.cs">
+      <DependentUpon>202312311928296_Addmgs.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +111,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202312310604243_AddData.resx">
       <DependentUpon>202312310604243_AddData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312311834248_Addprice.resx">
+      <DependentUpon>202312311834248_Addprice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312311857454_Addprices.resx">
+      <DependentUpon>202312311857454_Addprices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312311928296_Addmgs.resx">
+      <DependentUpon>202312311928296_Addmgs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
