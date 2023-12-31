@@ -10,6 +10,10 @@ namespace DAL.EF.Model
     public class Course
     {
         public int Id { get; set; }
+        
+        [Required(ErrorMessage = "Instructor nid is required")]
+        public int TeacherId { get; set; }
+
 
         [Required(ErrorMessage = "Name is required")]
         [StringLength(100, ErrorMessage = "Name length can't exceed 100 characters")]

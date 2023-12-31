@@ -10,6 +10,9 @@ namespace BLL.DTOs
     public class CourseDTO
     {
         public int Id { get; set; }
+       
+        [Required(ErrorMessage = "Instructor id is required")]
+        public int TeacherId { get; set; }
 
         [Required(ErrorMessage = "Name is required")]
         [StringLength(100, ErrorMessage = "Name length can't exceed 100 characters")]

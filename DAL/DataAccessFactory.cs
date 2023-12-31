@@ -66,5 +66,10 @@ namespace DAL
         {
             return new StudentCourseRepo();
         }
+
+        public static IASRepo<Course, int, Course, AdminAgeRangeResult> ACourseData()
+        {
+            return new AdminCourseRepo();
+        }
     }
 }

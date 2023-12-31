@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class order : DbMigration
+    public partial class AddData : DbMigration
     {
         public override void Up()
         {
@@ -22,6 +22,7 @@
                 .Index(t => t.StudentId)
                 .Index(t => t.CourseId);
             
+            AddColumn("dbo.Courses", "TeacherId", c => c.Int(nullable: false));
         }
         
         public override void Down()
@@ -30,6 +31,7 @@
             DropForeignKey("dbo.Orders", "CourseId", "dbo.Courses");
             DropIndex("dbo.Orders", new[] { "CourseId" });
             DropIndex("dbo.Orders", new[] { "StudentId" });
+            DropColumn("dbo.Courses", "TeacherId");
             DropTable("dbo.Orders");
         }
     }

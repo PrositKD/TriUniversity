@@ -239,7 +239,88 @@ namespace BLL.Services
             return mappedData;
         }
 
+        //-----Manage Course Post here----
+        public static CourseDTO GetCourse(int id)
+        {
+            var data = DataAccessFactory.ACourseData().GetID(id);
 
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Course, CourseDTO>();
+               
+            });
+
+            var mapper = new Mapper(config);
+
+            var postDTOs = mapper.Map<CourseDTO>(data);
+            return postDTOs;
+        }
+
+        public static List<CourseDTO> GetApproveCourse()
+        {
+            var data = DataAccessFactory.ACourseData().Read();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Course, CourseDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var postDTOs = mapper.Map<List<CourseDTO>>(data);
+            return postDTOs;
+        }
+        public static List<CourseDTO> GetNotApproveCourse()
+        {
+            var data = DataAccessFactory.ACourseData().NotApprove();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Course, CourseDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var postDTOs = mapper.Map<List<CourseDTO>>(data);
+            return postDTOs;
+        }
+        public static bool DeleteCourse(int id)
+        {
+            var dataAccess = DataAccessFactory.ACourseData();
+            return dataAccess.Delete(id);
+        }
+
+        public static CourseDTO UpdateCourseApproval(int id)
+        {
+            var dataAccess = DataAccessFactory.ACourseData();
+            var updatedEntity = dataAccess.Update(id);
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Course, CourseDTO>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var updatedDTO = mapper.Map<CourseDTO>(updatedEntity);
+            return updatedDTO;
+        }
+        public static List<PostCountDto> GetCourseRange()
+        {
+            var dataAccess = DataAccessFactory.ACourseData();
+            var data = dataAccess.ReadMonthly();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<AdminAgeRangeResult, PostCountDto>();
+            });
+
+            var mapper = new Mapper(config);
+
+            var mappedData = mapper.Map<List<AdminAgeRangeResult>, List<PostCountDto>>(data);
+
+            return mappedData;
+        }
 
 
     }
