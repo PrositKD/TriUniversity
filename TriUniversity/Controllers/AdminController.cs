@@ -19,7 +19,7 @@ namespace TriUniversity.Controllers
         {
             try
             {
-                // Access properties from the DTO (newsDto) and perform actions accordingly
+               
                 var data = AdminService.CreateAdmin(adminDto);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
@@ -35,7 +35,7 @@ namespace TriUniversity.Controllers
         {
             try
             {
-                // Access properties from the DTO (newsDto) and perform actions accordingly
+                
                 var data = AdminService.GetAdmin(adminDto);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
@@ -67,14 +67,14 @@ namespace TriUniversity.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
             }
         }
-
+        [ALoged]
         [HttpPost]
         [Route("api/admin/logout")]
         public HttpResponseMessage Logout()
         {
             try
             {
-                // Retrieve the token from the request header
+               
                 var token = HttpContext.Current.Request.Headers["Authorization"];
 
                 if (token == null)
@@ -99,15 +99,17 @@ namespace TriUniversity.Controllers
             }
         }
 
-        //student post manage
 
+
+        //student post manage
+        [ALoged]
         [HttpGet]
         [Route("api/admin/post/{postid}")]
         public HttpResponseMessage Getpostbyid(int postid)
         {
             try
             {
-                // Access properties from the DTO (newsDto) and perform actions accordingly
+
                 var data = AdminService.GetPost(postid);
                 if (data != null)
                 {
@@ -125,13 +127,14 @@ namespace TriUniversity.Controllers
 
             }
         }
+        [ALoged]
         [HttpGet]
-        [Route("api/admin/posts/approve")]
+        [Route("api/admin/post/approve")]
         public HttpResponseMessage GetApprovePots()
         {
             try
             {
-                // Access properties from the DTO (newsDto) and perform actions accordingly
+                
                 var data = AdminService.GetApprovePosts();
                 if (data != null)
                 {
@@ -148,13 +151,14 @@ namespace TriUniversity.Controllers
 
             }
         }
+        [ALoged]
         [HttpGet]
-        [Route("api/admin/posts/notapprove")]
+        [Route("api/admin/post/notapprove")]
         public HttpResponseMessage GetUnApprovePots()
         {
             try
             {
-                // Access properties from the DTO (newsDto) and perform actions accordingly
+                
                 var data = AdminService.GetNotApprovePosts();
                 if (data != null)
                 {
@@ -171,6 +175,7 @@ namespace TriUniversity.Controllers
 
             }
         }
+        [ALoged]
         [HttpDelete]
         [Route("api/admin/post/delete/{id}")]
         public HttpResponseMessage DeletePost(int id)
@@ -187,15 +192,15 @@ namespace TriUniversity.Controllers
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Post not found.");
                 }
             }
-            catch 
+            catch
             {
-                // Log the exception
+                
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
             }
         }
-
+        [ALoged]
         [HttpPut]
-        [Route("api/admin/posts/approve/{id}")]
+        [Route("api/admin/post/approve/{id}")]
         public HttpResponseMessage ApprovePost(int id)
         {
             try
@@ -210,10 +215,10 @@ namespace TriUniversity.Controllers
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Post not found.");
                 }
             }
-            catch 
+            catch
             {
-                // Log the exception
-                return Request.CreateResponse(HttpStatusCode.InternalServerError,  "An error occurred while processing the request.");
+               
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
             }
         }
         [ALoged]
@@ -240,15 +245,17 @@ namespace TriUniversity.Controllers
             }
         }
 
+        
         //student manage
-
+      
+        [ALoged]
         [HttpGet]
         [Route("api/admin/student/{id}")]
         public HttpResponseMessage GetStudentbyid(int id)
         {
             try
             {
-                // Access properties from the DTO (newsDto) and perform actions accordingly
+                
                 var data = AdminService.GetStudent(id);
                 if (data != null)
                 {
@@ -266,6 +273,8 @@ namespace TriUniversity.Controllers
 
             }
         }
+
+        [ALoged]
         [HttpGet]
         [Route("api/admin/student/approve")]
         public HttpResponseMessage GetApproveStudent()
@@ -289,13 +298,14 @@ namespace TriUniversity.Controllers
 
             }
         }
+
+        [ALoged]
         [HttpGet]
         [Route("api/admin/student/notapprove")]
         public HttpResponseMessage GetUnApproveStudent()
         {
             try
             {
-                // Access properties from the DTO (newsDto) and perform actions accordingly
                 var data = AdminService.GetNotApproveStudents();
                 if (data != null)
                 {
@@ -312,6 +322,8 @@ namespace TriUniversity.Controllers
 
             }
         }
+
+        [ALoged]
         [HttpDelete]
         [Route("api/admin/Student/delete/{id}")]
         public HttpResponseMessage DeleteStudent(int id)
@@ -328,12 +340,13 @@ namespace TriUniversity.Controllers
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Student not found.");
                 }
             }
-            catch {
-                // Log the exception
+            catch
+            {
+
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
             }
         }
-
+        [ALoged]
         [HttpPut]
         [Route("api/admin/Student/approve/{id}")]
         public HttpResponseMessage ApproveStudent(int id)
@@ -350,12 +363,13 @@ namespace TriUniversity.Controllers
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Student not found.");
                 }
             }
-            catch {
-                // Log the exception
-                return Request.CreateResponse(HttpStatusCode.InternalServerError,  "An error occurred while processing the request.");
+            catch
+            {
+
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
             }
         }
-
+        [ALoged]
         [HttpGet]
         [Route("api/admin/student/range")]
         public HttpResponseMessage GetStudentAgeRange()
@@ -371,6 +385,155 @@ namespace TriUniversity.Controllers
                 else
                 {
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Student not found."); // Return 404 if no data is found
+                }
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
+            }
+        }
+
+
+      
+        
+        //Course Manage
+
+
+        [ALoged]
+        [HttpGet]
+        [Route("api/admin/Course/{postid}")]
+        public HttpResponseMessage GetCoursebyid(int postid)
+        {
+            try
+            {
+
+                var data = AdminService.GetPost(postid);
+                if (data != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, "Course not found");
+                }
+
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+
+            }
+        }
+        [ALoged]
+        [HttpGet]
+        [Route("api/admin/Course/approve")]
+        public HttpResponseMessage GetApproveCourse()
+        {
+            try
+            {
+
+                var data = AdminService.GetApproveCourse();
+                if (data != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, "Course not found");
+                }
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+
+            }
+        }
+        [ALoged]
+        [HttpGet]
+        [Route("api/admin/Course/notapprove")]
+        public HttpResponseMessage GetUnApproveCourse()
+        {
+            try
+            {
+
+                var data = AdminService.GetNotApproveCourse();
+                if (data != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, "Course not found");
+                }
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+
+            }
+        }
+        [ALoged]
+        [HttpDelete]
+        [Route("api/admin/course/delete/{id}")]
+        public HttpResponseMessage DeleteCourse(int id)
+        {
+            try
+            {
+                var success = AdminService.DeleteCourse(id);
+                if (success)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, "Course deleted successfully.");
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Course not found.");
+                }
+            }
+            catch
+            {
+
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
+            }
+        }
+        [ALoged]
+        [HttpPut]
+        [Route("api/admin/Course/approve/{id}")]
+        public HttpResponseMessage ApproveCourse(int id)
+        {
+            try
+            {
+                var updatedPost = AdminService.UpdateCourseApproval(id);
+                if (updatedPost != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, updatedPost);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Course not found.");
+                }
+            }
+            catch
+            {
+
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
+            }
+        }
+        [ALoged]
+        [HttpGet]
+        [Route("api/admin/Course/count")]
+        public HttpResponseMessage GetCourseRange()
+        {
+            try
+            {
+                var data = AdminService.GetCourseRange();
+
+                if (data != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Course not found."); // Return 404 if no data is found
                 }
             }
             catch

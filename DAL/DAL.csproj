@@ -70,16 +70,13 @@
     <Compile Include="Interface\SAuth.cs" />
     <Compile Include="Interface\SCoRepo.cs" />
     <Compile Include="Interface\SRepo.cs" />
-    <Compile Include="Migrations\202312301405089_rabbiviewcourse.cs" />
-    <Compile Include="Migrations\202312301405089_rabbiviewcourse.designer.cs">
-      <DependentUpon>202312301405089_rabbiviewcourse.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312301518114_order.cs" />
-    <Compile Include="Migrations\202312301518114_order.designer.cs">
-      <DependentUpon>202312301518114_order.cs</DependentUpon>
+    <Compile Include="Migrations\202312310604243_AddData.cs" />
+    <Compile Include="Migrations\202312310604243_AddData.designer.cs">
+      <DependentUpon>202312310604243_AddData.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\AdminCourseRepo.cs" />
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="Repos\AdminStudentRepo.cs" />
     <Compile Include="Repos\AdminStuPostRepo.cs" />
@@ -97,11 +94,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312301405089_rabbiviewcourse.resx">
-      <DependentUpon>202312301405089_rabbiviewcourse.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312301518114_order.resx">
-      <DependentUpon>202312301518114_order.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312310604243_AddData.resx">
+      <DependentUpon>202312310604243_AddData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
