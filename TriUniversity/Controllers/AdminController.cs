@@ -15,11 +15,11 @@ namespace TriUniversity.Controllers
     {
         [HttpPost]
         [Route("api/admin/create")]
-        public HttpResponseMessage CreateNews([FromBody] AdminDTO adminDto)
+        public HttpResponseMessage CreateAdmin([FromBody] AdminDTO adminDto)
         {
             try
             {
-               
+
                 var data = AdminService.CreateAdmin(adminDto);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
@@ -35,7 +35,7 @@ namespace TriUniversity.Controllers
         {
             try
             {
-                
+
                 var data = AdminService.GetAdmin(adminDto);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
@@ -74,7 +74,7 @@ namespace TriUniversity.Controllers
         {
             try
             {
-               
+
                 var token = HttpContext.Current.Request.Headers["Authorization"];
 
                 if (token == null)
@@ -130,11 +130,11 @@ namespace TriUniversity.Controllers
         [ALoged]
         [HttpGet]
         [Route("api/admin/post/approve")]
-        public HttpResponseMessage GetApprovePots()
+        public HttpResponseMessage GetApprovePosts()
         {
             try
             {
-                
+
                 var data = AdminService.GetApprovePosts();
                 if (data != null)
                 {
@@ -154,11 +154,11 @@ namespace TriUniversity.Controllers
         [ALoged]
         [HttpGet]
         [Route("api/admin/post/notapprove")]
-        public HttpResponseMessage GetUnApprovePots()
+        public HttpResponseMessage GetUnApprovePosts()
         {
             try
             {
-                
+
                 var data = AdminService.GetNotApprovePosts();
                 if (data != null)
                 {
@@ -194,7 +194,7 @@ namespace TriUniversity.Controllers
             }
             catch
             {
-                
+
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
             }
         }
@@ -217,14 +217,14 @@ namespace TriUniversity.Controllers
             }
             catch
             {
-               
+
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request.");
             }
         }
         [ALoged]
         [HttpGet]
         [Route("api/admin/post/count")]
-        public HttpResponseMessage GetPostRange()
+        public HttpResponseMessage GetPostCountPerID()
         {
             try
             {
@@ -245,17 +245,17 @@ namespace TriUniversity.Controllers
             }
         }
 
-        
+
         //student manage
-      
+
         [ALoged]
         [HttpGet]
         [Route("api/admin/student/{id}")]
-        public HttpResponseMessage GetStudentbyid(int id)
+        public HttpResponseMessage GetStudentbyId(int id)
         {
             try
             {
-                
+
                 var data = AdminService.GetStudent(id);
                 if (data != null)
                 {
@@ -394,15 +394,15 @@ namespace TriUniversity.Controllers
         }
 
 
-      
-        
+
+
         //Course Manage
 
 
         [ALoged]
         [HttpGet]
         [Route("api/admin/Course/{postid}")]
-        public HttpResponseMessage GetCoursebyid(int postid)
+        public HttpResponseMessage GetCoursebyId(int postid)
         {
             try
             {
@@ -521,7 +521,7 @@ namespace TriUniversity.Controllers
         [ALoged]
         [HttpGet]
         [Route("api/admin/Course/count")]
-        public HttpResponseMessage GetCourseRange()
+        public HttpResponseMessage GetCourseCountPerId()
         {
             try
             {
@@ -544,7 +544,7 @@ namespace TriUniversity.Controllers
         [ALoged]
         [HttpGet]
         [Route("api/admin/Course/totalsale")]
-        public HttpResponseMessage GetCourseSale()
+        public HttpResponseMessage GetCourseSaleProfit()
         {
             try
             {
@@ -559,7 +559,7 @@ namespace TriUniversity.Controllers
                     return Request.CreateResponse(HttpStatusCode.NotFound, "Course sale not found."); // Return 404 if no data is found
                 }
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
             }

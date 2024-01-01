@@ -76,9 +76,9 @@
     <Compile Include="Interface\SAuth.cs" />
     <Compile Include="Interface\SCoRepo.cs" />
     <Compile Include="Interface\SRepo.cs" />
-    <Compile Include="Migrations\202401011503558_SagorCodeAdded.cs" />
-    <Compile Include="Migrations\202401011503558_SagorCodeAdded.designer.cs">
-      <DependentUpon>202401011503558_SagorCodeAdded.cs</DependentUpon>
+    <Compile Include="Migrations\202401011632596_InitDB.cs" />
+    <Compile Include="Migrations\202401011632596_InitDB.designer.cs">
+      <DependentUpon>202401011632596_InitDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,8 +101,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202401011503558_SagorCodeAdded.resx">
-      <DependentUpon>202401011503558_SagorCodeAdded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202401011632596_InitDB.resx">
+      <DependentUpon>202401011632596_InitDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

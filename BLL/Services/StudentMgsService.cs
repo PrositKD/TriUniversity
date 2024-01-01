@@ -115,6 +115,60 @@ namespace BLL.Services
             return result ? "Delete successfully" : "Failed";
         }
 
-       
+        public static StudentCommentDTO CreateComment(StudentCommentDTO commentDTO)
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<StudentCommentDTO, StudentComment>();
+                cfg.CreateMap<StudentComment,StudentCommentDTO>();
+            });
+
+            var mapper = new Mapper(config);
+            var commentEntity = mapper.Map<StudentComment>(commentDTO);
+
+            commentEntity.Date = DateTime.Now;
+
+            var createdCommentEntity = DataAccessFactory.StudentCommentData().Create(commentEntity);
+
+            if (createdCommentEntity != null)
+            {
+                
+                var createdCommentDTO = mapper.Map<StudentCommentDTO>(createdCommentEntity);
+                return createdCommentDTO;
+            }
+
+          
+            return null;
+        }
+
+        public static StudentCommentDTO UpdateComment(StudentCommentDTO commentDTO)
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<StudentCommentDTO, StudentComment>();
+                cfg.CreateMap<StudentComment, StudentCommentDTO>();
+            });
+
+            var mapper = new Mapper(config);
+            var commentEntity = mapper.Map<StudentComment>(commentDTO);
+
+            var updatedCommentEntity = DataAccessFactory.StudentCommentData().Update(commentEntity);
+
+            if (updatedCommentEntity != null)
+            {
+                // Mapping the updated entity back to DTO
+                var updatedCommentDTO = mapper.Map<StudentCommentDTO>(updatedCommentEntity);
+                return updatedCommentDTO;
+            }
+
+            // Handle the case where comment update failed
+            return null;
+        }
+
+        public static bool DeleteComment(int commentId)
+        {
+            return DataAccessFactory.StudentCommentData().Delete(commentId);
+        }
+
     }
 }

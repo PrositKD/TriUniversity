@@ -67,7 +67,6 @@ namespace TriUniversity.Controllers
         {
             try
             {
-                // Access properties from the DTO (newsDto) and perform actions accordingly
                 var data = StudentPostService.GetPost(postid);
                 if (data != null)
                 {
@@ -82,8 +81,46 @@ namespace TriUniversity.Controllers
 
             }
         }
+        [Logged]
+        [HttpPost]
+        [Route("api/student/create-post")]
+        public HttpResponseMessage CreatePost([FromBody] StudentPostDTO postDTO)
+        {
+            try
+            {
+                
+                StudentPostService.CreatePost(postDTO);
 
+                return Request.CreateResponse(HttpStatusCode.OK, "Post created successfully");
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, $"Error creating post: {ex.Message}");
+            }
+        }
+        [Logged]
+        [HttpDelete]
+        [Route("api/student/delete-post/{postId}")]
+        public HttpResponseMessage DeletePost(int postId)
+        {
+            try
+            {
+                var isDeleted = StudentPostService.DeletePost(postId);
 
+                if (isDeleted)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, "Post deleted successfully");
+                }
+
+                return Request.CreateResponse(HttpStatusCode.NotFound, "Post not found");
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, $"Error deleting post: {ex.Message}");
+            }
+        }
+
+        [Logged]
         [HttpPut]
         [Route("api/student/update/{studentId}")]
         public HttpResponseMessage UpdateStudentProfile(int studentId, [FromBody] StudentUpdateDTO updatedDto)
@@ -107,6 +144,7 @@ namespace TriUniversity.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "An error occurred while processing the request");
             }
         }
+        [Logged]
         [HttpDelete]
         [Route("api/student/delete/{studentId}")]
         public HttpResponseMessage DeleteStudentAccount(int studentId)
@@ -127,6 +165,7 @@ namespace TriUniversity.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
             }
         }
+       
         [HttpPost]
         [Route("api/student/login")]
         public HttpResponseMessage Login(SLoginModel login)
@@ -152,13 +191,14 @@ namespace TriUniversity.Controllers
 
 
         }
+        [Logged]
         [HttpPost]
         [Route("api/student/logout")]
         public HttpResponseMessage Logout()
         {
             try
             {
-                // Retrieve the token from the request header
+              
                 var token = HttpContext.Current.Request.Headers["Authorization"];
 
                 if (token == null)
@@ -184,6 +224,7 @@ namespace TriUniversity.Controllers
 
 
         }
+      
         [HttpGet]
         [Route("api/courses")]
         public HttpResponseMessage GetAllCourses()
@@ -199,7 +240,7 @@ namespace TriUniversity.Controllers
             }
 
         }
-
+        [Logged]
         [HttpPost]
         [Route("api/student/buy-course")]
         public HttpResponseMessage BuyCourse([FromBody] OrderCourseDTO orderDTO)
@@ -235,21 +276,19 @@ namespace TriUniversity.Controllers
 
                     var result = new HttpResponseMessage(HttpStatusCode.OK);
 
-                    // 1) Get file bytes
                     var fileName = courseName;
                     var filePath = HttpContext.Current.Server
                         .MapPath($"~/App_Data/{fileName}");
 
                     var fileBytes = File.ReadAllBytes(filePath);
 
-                    // 2) Add bytes to a memory stream
                     var fileMemStream =
                         new MemoryStream(fileBytes);
 
-                    // 3) Add memory stream to response
+              
                     result.Content = new StreamContent(fileMemStream);
 
-                    // 4) build response headers
+                   
                     var headers = result.Content.Headers;
 
                     headers.ContentDisposition =
@@ -257,7 +296,7 @@ namespace TriUniversity.Controllers
                     headers.ContentDisposition.FileName = fileName;
 
                     headers.ContentType =
-                        //new MediaTypeHeaderValue("application/jpg");
+                       
                         new MediaTypeHeaderValue("application/octet-stream");
 
                     headers.ContentLength = fileMemStream.Length;

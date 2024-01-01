@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class SagorCodeAdded : DbMigration
+    public partial class InitDB : DbMigration
     {
         public override void Up()
         {

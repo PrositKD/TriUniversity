@@ -86,6 +86,10 @@ namespace DAL
         public static Dcourse<Course> courseData()
         {
             return new CourseRepo();
+        } 
+        public static SRepo<StudentComment, int, StudentComment, string> StudentCommentData()
+        {
+            return new StudentCommentRepo();
         }
     }
 }

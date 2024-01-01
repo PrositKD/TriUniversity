@@ -8,31 +8,50 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class StudentCommentRepo : Repo, SRepo<StudentComment, int, StudentComment,string>
+    internal class StudentCommentRepo : Repo, SRepo<StudentComment, int, StudentComment, string>
     {
         public StudentComment Create(StudentComment obj)
         {
-            throw new NotImplementedException();
+            obj.Date = DateTime.Now;
+
+            db.StudentComments.Add(obj);
+
+            if (db.SaveChanges() > 0)
+            {
+                return obj;
+            }
+
+            return null;
         }
 
         public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            var existingComment = Read(id);
+
+            if (existingComment != null)
+            {
+                db.StudentComments.Remove(existingComment);
+                db.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
 
         public StudentComment Get(StudentComment obj)
         {
-            throw new NotImplementedException();
+            // Assuming you want to retrieve a comment based on certain criteria
+            return db.StudentComments.FirstOrDefault(c => c.Comment == obj.Comment);
         }
 
         public List<StudentComment> GetPosts(int id)
         {
-            throw new NotImplementedException();
+            return db.StudentComments.Where(comment => comment.PostId == id).ToList();
         }
 
         public StudentComment Read(int id)
         {
-            throw new NotImplementedException();
+            return db.StudentComments.Find(id);
         }
 
         public StudentComment Reademail(string id)
@@ -42,8 +61,19 @@ namespace DAL.Repos
 
         public StudentComment Update(StudentComment obj)
         {
-            throw new NotImplementedException();
+            var existingComment = Read(obj.Id);
+
+            if (existingComment != null)
+            {
+                db.Entry(existingComment).CurrentValues.SetValues(obj);
+
+                if (db.SaveChanges() > 0)
+                {
+                    return obj;
+                }
+            }
+
+            return null;
         }
     }
 }
-   

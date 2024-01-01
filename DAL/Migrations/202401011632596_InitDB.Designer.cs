@@ -7,13 +7,13 @@ namespace DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class SagorCodeAdded : IMigrationMetadata
+    public sealed partial class InitDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SagorCodeAdded));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "202401011503558_SagorCodeAdded"; }
+            get { return "202401011632596_InitDB"; }
         }
         
         string IMigrationMetadata.Source
