@@ -79,5 +79,13 @@ namespace DAL
         {
             return new StudentMgsRepo();
         }
+        public static mEarningRepo coursedata()
+        {
+            return new CourseRepo();
+        }
+        public static Dcourse<Course> courseData()
+        {
+            return new CourseRepo();
+        }
     }
 }

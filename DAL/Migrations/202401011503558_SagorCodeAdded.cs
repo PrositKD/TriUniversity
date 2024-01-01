@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Solving : DbMigration
+    public partial class SagorCodeAdded : DbMigration
     {
         public override void Up()
         {
@@ -22,16 +22,16 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        TeacherId = c.Int(nullable: false),
                         Name = c.String(nullable: false, maxLength: 100),
                         ShortDescription = c.String(maxLength: 500),
                         InstructorName = c.String(nullable: false, maxLength: 100),
-                        Price = c.Int(nullable: false),
-                        Duration = c.Int(nullable: false),
+                        Price = c.String(nullable: false),
+                        Duration = c.String(nullable: false),
                         VideoPath = c.String(nullable: false, maxLength: 200),
                         UploadTime = c.DateTime(nullable: false),
                         ApproveOrNot = c.Boolean(nullable: false),
                         SellCount = c.Int(nullable: false),
+                        userId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
