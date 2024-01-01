@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
@@ -171,17 +172,23 @@ namespace TriUniversity.Controllers
                         }
                         string name = httpRequest.Form["Name"];
                         string shortDescription = httpRequest.Form["ShortDescription"];
-                        string duration = httpRequest.Form["Duration"];
+                        string originalDuration = httpRequest.Form["Duration"];
                         string instructorName = httpRequest.Form["InstructorName"];
-                        string price = httpRequest.Form["Price"];
+                        string originalPrice = httpRequest.Form["Price"];
+
+                        string numbersOnlyStringForD = Regex.Replace(originalDuration, "[^0-9]", "");
+                        string numbersOnlyStringForP = Regex.Replace(originalPrice, "[^0-9]", "");
+
+                        int Cduration = int.Parse(numbersOnlyStringForD);
+                        int Cprice = int.Parse(numbersOnlyStringForP);
 
                         CourseDTO courseDTO = new CourseDTO
                         {
                             Name = name,
                             ShortDescription = shortDescription,
-                            Duration = duration,
+                            Duration = Cduration,
                             InstructorName = instructorName,
-                            Price = price
+                            Price = Cprice
                             // Add other properties as needed
                         };
 

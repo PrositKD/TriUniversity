@@ -12,7 +12,7 @@ namespace BLL.Services
 {
     public class StudentMgsService
     {
-        public static MgsDTO CreateMgs(MgsDTO MgsDTO)
+        public static MgsDTO CreateMgs(MgsDTO mgsDTO)
         {
             // Configure AutoMapper
             var config = new MapperConfiguration(cfg =>
@@ -22,7 +22,7 @@ namespace BLL.Services
             });
 
             var mapper = new Mapper(config);
-            var Entity = mapper.Map<StudentMgs>(MgsDTO);
+            var Entity = mapper.Map<StudentMgs>(mgsDTO);
 
             var addedEntity = DataAccessFactory.StudentMgs().Create(Entity);
 

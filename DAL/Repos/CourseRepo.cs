@@ -28,7 +28,7 @@ namespace DAL.Repos
                 var course = db.Courses.FirstOrDefault(c => c.Id == order.CourseId);
                 if (course != null)
                 {
-                    decimal coursePrice = decimal.Parse(course.Price);
+                    decimal coursePrice = course.Price;
                     monthlyIncome[month - 1] += coursePrice;
                 }
             }

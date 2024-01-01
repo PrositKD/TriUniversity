@@ -25,7 +25,16 @@ namespace DAL.Repos
 
         public bool delete(string key)
         {
-            throw new NotImplementedException();
+            var token = db.Tokens.FirstOrDefault(t => t.UserId == key);
+
+            if (token != null)
+            {
+                db.Tokens.Remove(token);
+                db.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
 
         public Token get(string key)

@@ -11,16 +11,16 @@ namespace DAL.Repos
     {
         public StudentMgs Create(StudentMgs obj)
         {
-            if (obj == null)
+            if (obj != null)
             {
-                throw new ArgumentNullException(nameof(obj));
+               // obj.DateOfMgs = DateTime.Now; // Set the DateOfMgs property to the current date and time
+                db.StudentMgses.Add(obj);
+                db.SaveChanges();
+
+                return obj;
             }
 
-            obj.DateOfMgs = DateTime.Now;
-            db.StudentMgses.Add(obj);
-            db.SaveChanges();
-
-            return obj;
+            return null;
         }
 
 
@@ -56,7 +56,7 @@ namespace DAL.Repos
             {
                 try
                 {
-                    existing.DateOfMgs = DateTime.Now;
+                   // existing.DateOfMgs = DateTime.Now;
                     existing.Message = obj.Message;
                      // Add this line to update the Reply field
 

@@ -244,3 +244,11 @@ C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.dll
 C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.pdb
 C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.Migrations.InitDB.resources
 C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addall.resources
+C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addallss.resources
+C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addallssd.resources
+C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addl.resources
+C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addla.resources
+C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addlad.resources
+C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addladd.resources
+C:\Users\asus\Desktop\New folder (2)\Final\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addladd1.resources

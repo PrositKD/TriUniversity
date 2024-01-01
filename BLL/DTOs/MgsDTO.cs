@@ -19,7 +19,7 @@ namespace BLL.DTOs
         [Required(ErrorMessage = "Teacher is required")]
         [ForeignKey("Teacher")]
         public int TeacherId { get; set; }
-        public DateTime DateOfMgs { get; set; }
+       // public DateTime DateOfMgs { get; set; }
 
         [Required(ErrorMessage = "Message is required")]
         public string Message { get; set; }

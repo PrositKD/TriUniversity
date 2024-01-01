@@ -50,7 +50,7 @@ namespace TriUniversity.Controllers
             }
             catch (Exception ex)
             {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, $"An error occurred: {ex.Message}");
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
             }
         }
 

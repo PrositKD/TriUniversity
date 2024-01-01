@@ -25,11 +25,11 @@ namespace DAL.EF.Model
 
         [Required(ErrorMessage = "Price is required")]
 
-        public string Price { get; set; }
+        public int Price { get; set; }
 
         [Required(ErrorMessage = "Duration is required")]
 
-        public string Duration { get; set; }
+        public int Duration { get; set; }
 
         [Required(ErrorMessage = "Video path is required")]
         [StringLength(200, ErrorMessage = "Video path length can't exceed 200 characters")]

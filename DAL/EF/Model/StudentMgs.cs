@@ -16,17 +16,17 @@ public class StudentMgs
     [ForeignKey("Teacher")]
     public int TeacherId { get; set; }
 
-    [Required(ErrorMessage = "Date of message is required")]
-    [DataType(DataType.DateTime)]
-    public DateTime DateOfMgs { get; set; }
-  
+    
+   // public DateTime? DateOfMgs { get; set; }
 
     [Required(ErrorMessage = "Message is required")]
     public string Message { get; set; }
 
-    // New field for reply
     public string Reply { get; set; }
-    public DateTime DateOfMgsReply { get; set; }
+
+    public DateTime? DateOfMgsReply { get; set; } // Nullable DateTime
+
     public virtual Student Student { get; set; }
+
     public virtual Teacher Teacher { get; set; }
 }

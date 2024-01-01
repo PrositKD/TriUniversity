@@ -95,7 +95,7 @@ namespace DAL.Repos
                     TotalCount = group.Count(),
                     TotalSalePrice = db.Courses
                         .Where(c => c.Id == group.Key)
-                        .Select(c => int.Parse(c.Price))
+                        .Select(c => c.Price)
                         .FirstOrDefault() * group.Count()
                 })
                 .ToList();
