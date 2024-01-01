@@ -74,25 +74,9 @@
     <Compile Include="Interface\SAuth.cs" />
     <Compile Include="Interface\SCoRepo.cs" />
     <Compile Include="Interface\SRepo.cs" />
-    <Compile Include="Migrations\202312310604243_AddData.cs" />
-    <Compile Include="Migrations\202312310604243_AddData.designer.cs">
-      <DependentUpon>202312310604243_AddData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312311834248_Addprice.cs" />
-    <Compile Include="Migrations\202312311834248_Addprice.designer.cs">
-      <DependentUpon>202312311834248_Addprice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312311857454_Addprices.cs" />
-    <Compile Include="Migrations\202312311857454_Addprices.designer.cs">
-      <DependentUpon>202312311857454_Addprices.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312311928296_Addmgs.cs" />
-    <Compile Include="Migrations\202312311928296_Addmgs.designer.cs">
-      <DependentUpon>202312311928296_Addmgs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202401010832195_Adddatee.cs" />
-    <Compile Include="Migrations\202401010832195_Adddatee.designer.cs">
-      <DependentUpon>202401010832195_Adddatee.cs</DependentUpon>
+    <Compile Include="Migrations\202401011325385_Solving.cs" />
+    <Compile Include="Migrations\202401011325385_Solving.designer.cs">
+      <DependentUpon>202401011325385_Solving.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,20 +99,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312310604243_AddData.resx">
-      <DependentUpon>202312310604243_AddData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312311834248_Addprice.resx">
-      <DependentUpon>202312311834248_Addprice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312311857454_Addprices.resx">
-      <DependentUpon>202312311857454_Addprices.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312311928296_Addmgs.resx">
-      <DependentUpon>202312311928296_Addmgs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202401010832195_Adddatee.resx">
-      <DependentUpon>202401010832195_Adddatee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202401011325385_Solving.resx">
+      <DependentUpon>202401011325385_Solving.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
