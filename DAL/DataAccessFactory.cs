@@ -74,6 +74,10 @@ namespace DAL
         public static IACSRepo<AdminCourseStatistics> ACourseDataS()
         {
             return new AdminCourseRepo();
+        }  
+        public static IMRepo<StudentMgs, int, StudentMgs> StudentMgs()
+        {
+            return new StudentMgsRepo();
         }
     }
 }
