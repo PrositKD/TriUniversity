@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.EF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace DAL.Interface
         classType get(idType key);
         returnType create(classType obj);
         bool update(classType obj);
+
         bool delete(idType key);
+       
     }
 }

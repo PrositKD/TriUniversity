@@ -53,7 +53,7 @@ namespace DAL.Repos
             try
             {
                 var groupedData = db.Courses
-                    .GroupBy(course => course.TeacherId)
+                    .GroupBy(course => course.userId)
                     .Select(group => new AdminAgeRangeResult
                     {
                         Id = group.Key,
@@ -95,7 +95,7 @@ namespace DAL.Repos
                     TotalCount = group.Count(),
                     TotalSalePrice = db.Courses
                         .Where(c => c.Id == group.Key)
-                        .Select(c => c.Price)
+                        .Select(c => int.Parse(c.Price))
                         .FirstOrDefault() * group.Count()
                 })
                 .ToList();

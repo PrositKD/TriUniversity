@@ -43,27 +43,26 @@ namespace BLL.Services
         {
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<TeacherDTO, Teacher>(); // Map from DTO to Teacher entity
-                cfg.CreateMap<Teacher, TeacherDTO>(); // Map from Teacher entity to DTO
+                cfg.CreateMap<TeacherDTO, Teacher>();
+                cfg.CreateMap<Teacher, TeacherDTO>();
             });
 
-            // Create a mapper instance
             IMapper mapper = new Mapper(config);
-            // Retrieve the stored OTP using the provided email
+
             if (OtpDictionary.TryGetValue(instructorDTO.email, out int storedOTP))
             {
-                // Compare the stored OTP with the user-provided OTP
+
                 if (storedOTP == otp)
                 {
                     var teacherEntity = mapper.Map<Teacher>(instructorDTO);
 
-                    // Pass the mapped entity to the repository's Add method
+
                     var addedTeacherEntity = DataAccessFactory.InstructorData().create(teacherEntity);
 
-                    // Use AutoMapper to map the entity back to DTO
+
                     var addedTeacherDTO = mapper.Map<TeacherDTO>(addedTeacherEntity);
 
-                    // Return the DTO
+
                     return addedTeacherDTO;
                 }
 

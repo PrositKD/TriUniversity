@@ -201,3 +201,20 @@ C:\Users\asus\Desktop\New folder (2)\New folder (2)88\TriUniversity\DAL\obj\Debu
 C:\Users\asus\Desktop\New folder (2)\New folder (2)88\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addprice.resources
 C:\Users\asus\Desktop\New folder (2)\New folder (2)88\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addprices.resources
 C:\Users\asus\Desktop\New folder (2)\New folder (2)88\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addmgs.resources
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\obj\Debug\DAL.Migrations.AddData.resources
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addprice.resources
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addprices.resources
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\obj\Debug\DAL.Migrations.Addmgs.resources
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\obj\Debug\DAL.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\obj\Debug\DAL.pdb
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\bin\Debug\DAL.dll.config
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\bin\Debug\DAL.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\bin\Debug\DAL.pdb
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\DAL\obj\Debug\DAL.csproj.CopyComplete

@@ -9,11 +9,8 @@ namespace DAL.EF.Model
 {
     public class Course
     {
+        [Key]
         public int Id { get; set; }
-        
-        [Required(ErrorMessage = "Instructor nid is required")]
-        public int TeacherId { get; set; }
-
 
         [Required(ErrorMessage = "Name is required")]
         [StringLength(100, ErrorMessage = "Name length can't exceed 100 characters")]
@@ -27,12 +24,12 @@ namespace DAL.EF.Model
         public string InstructorName { get; set; }
 
         [Required(ErrorMessage = "Price is required")]
-      
-        public int Price { get; set; }
+
+        public string Price { get; set; }
 
         [Required(ErrorMessage = "Duration is required")]
-        [Range(1, int.MaxValue, ErrorMessage = "Duration must be a positive value")]
-        public int Duration { get; set; }
+
+        public string Duration { get; set; }
 
         [Required(ErrorMessage = "Video path is required")]
         [StringLength(200, ErrorMessage = "Video path length can't exceed 200 characters")]
@@ -48,5 +45,6 @@ namespace DAL.EF.Model
         [Display(Name = "Sell Count")]
         [Range(0, int.MaxValue, ErrorMessage = "Sell count must be a non-negative value")]
         public int SellCount { get; set; }
+        public int userId { get; set; }
     }
 }

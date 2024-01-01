@@ -1,14 +1,18 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Http;
 using TriUniversity.Auth;
 using static BLL.Services.StudentService;
+using System.Threading.Tasks;
 
 namespace TriUniversity.Controllers
 {
@@ -215,6 +219,62 @@ namespace TriUniversity.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
             }
+        }
+
+        [Logged]
+        [HttpPost]
+        [Route("api/course/download/{courseId}")]
+        public HttpResponseMessage courseDownload(int courseId)
+        {
+            try
+            {
+                string courseName = CourseService.findCoursId(courseId);
+                if (courseName != null)
+                {
+
+
+                    var result =new HttpResponseMessage(HttpStatusCode.OK);
+
+                    // 1) Get file bytes
+                    var fileName = courseName;
+                    var filePath = HttpContext.Current.Server
+                        .MapPath($"~/App_Data/{fileName}");
+
+                    var fileBytes = File.ReadAllBytes(filePath);
+
+                    // 2) Add bytes to a memory stream
+                    var fileMemStream =
+                        new MemoryStream(fileBytes);
+
+                    // 3) Add memory stream to response
+                    result.Content = new StreamContent(fileMemStream);
+
+                    // 4) build response headers
+                    var headers = result.Content.Headers;
+
+                    headers.ContentDisposition =
+                        new ContentDispositionHeaderValue("attachment");
+                    headers.ContentDisposition.FileName = fileName;
+
+                    headers.ContentType =
+                        //new MediaTypeHeaderValue("application/jpg");
+                        new MediaTypeHeaderValue("application/octet-stream");
+
+                    headers.ContentLength = fileMemStream.Length;
+
+                    return result;
+                   
+
+                    
+                }
+                else return Request.CreateResponse(HttpStatusCode.NotFound, new { Message = "You did not buy the course" });
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound, ex.ToString());
+            }
+
         }
 
 

@@ -180,3 +180,17 @@ C:\Users\asus\Desktop\New folder (2)\New folder (2)88\TriUniversity\BLL\bin\Debu
 C:\Users\asus\Desktop\New folder (2)\New folder (2)88\TriUniversity\BLL\bin\Debug\AutoMapper.xml
 C:\Users\asus\Desktop\New folder (2)\New folder (2)88\TriUniversity\BLL\bin\Debug\EntityFramework.xml
 C:\Users\asus\Desktop\New folder (2)\New folder (2)88\TriUniversity\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\obj\Debug\BLL.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\obj\Debug\BLL.pdb
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\bin\Debug\BLL.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\bin\Debug\BLL.pdb
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\bin\Debug\AutoMapper.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\bin\Debug\DAL.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\bin\Debug\DAL.pdb
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\bin\Debug\DAL.dll.config
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\bin\Debug\AutoMapper.xml
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\bin\Debug\EntityFramework.xml
+C:\Users\Aminul Islam Sagor\Desktop\dot net\update05\TriUniversity\BLL\obj\Debug\BLL.csproj.CopyComplete

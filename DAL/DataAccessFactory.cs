@@ -75,5 +75,16 @@ namespace DAL
         {
             return new AdminCourseRepo();
         }
+
+        public static Dcourse<Course> courseData()
+        {
+            return new CourseRepo();
+        }
+
+        public static mEarningRepo coursedata()
+        {
+            return new CourseRepo();
+        }
+
     }
 }
