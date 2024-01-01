@@ -65,18 +65,20 @@
     <Compile Include="EF\Model\StudentPost.cs" />
     <Compile Include="EF\Model\Teacher.cs" />
     <Compile Include="EF\Model\Token.cs" />
+    <Compile Include="Interface\DCourseRepo.cs" />
     <Compile Include="Interface\IACSRepo.cs" />
     <Compile Include="Interface\IASRepo.cs" />
     <Compile Include="Interface\IAuth.cs" />
     <Compile Include="Interface\IMRepo.cs" />
     <Compile Include="Interface\InRepo.cs" />
     <Compile Include="Interface\IRepo.cs" />
+    <Compile Include="Interface\mEarningRepo.cs" />
     <Compile Include="Interface\SAuth.cs" />
     <Compile Include="Interface\SCoRepo.cs" />
     <Compile Include="Interface\SRepo.cs" />
-    <Compile Include="Migrations\202401011325385_Solving.cs" />
-    <Compile Include="Migrations\202401011325385_Solving.designer.cs">
-      <DependentUpon>202401011325385_Solving.cs</DependentUpon>
+    <Compile Include="Migrations\202401011503558_SagorCodeAdded.cs" />
+    <Compile Include="Migrations\202401011503558_SagorCodeAdded.designer.cs">
+      <DependentUpon>202401011503558_SagorCodeAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,8 +101,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202401011325385_Solving.resx">
-      <DependentUpon>202401011325385_Solving.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202401011503558_SagorCodeAdded.resx">
+      <DependentUpon>202401011503558_SagorCodeAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

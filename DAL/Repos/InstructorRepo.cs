@@ -18,9 +18,16 @@ namespace DAL.Repos
         public bool Authenticate(string email, string password)
         {
             var data = db.Teachers.FirstOrDefault(u => u.email.Equals(email) && u.password.Equals(password));
-            if (data == null) return true;
+            if (data != null) return true;
             return false;
         }
+        public bool Authenticate(string email)
+        {
+            var data = db.Teachers.FirstOrDefault(u => u.email.Equals(email));
+            if (data != null) return true;
+            return false;
+        }
+
 
         public Teacher create(Teacher obj)
         {
@@ -43,6 +50,19 @@ namespace DAL.Repos
         public bool update(Teacher obj)
         {
             throw new NotImplementedException();
+        }
+        public bool updatepass(string email, string newPassword)
+        {
+            var teacher = db.Teachers.FirstOrDefault(t => t.email == email);
+
+            if (teacher != null)
+            {
+                teacher.password = newPassword;
+                db.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
     }
 }

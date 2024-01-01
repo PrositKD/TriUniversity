@@ -7,13 +7,13 @@ namespace DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Solving : IMigrationMetadata
+    public sealed partial class SagorCodeAdded : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Solving));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(SagorCodeAdded));
         
         string IMigrationMetadata.Id
         {
-            get { return "202401011325385_Solving"; }
+            get { return "202401011503558_SagorCodeAdded"; }
         }
         
         string IMigrationMetadata.Source
